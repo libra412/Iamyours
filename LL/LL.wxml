@@ -1,0 +1,76 @@
+<!--------------------
+====▶项目模版文件◀====
+========★落落★========
+---------------------->
+
+<!--none模板-->
+<template name="none">
+</template>
+
+<!--居顶暂无数据-->
+<template name="top-emptyData">
+  <view class="g-emptyData">
+    <text class="g-emptyData-line"></text>
+    <text class="g-emptyData-text">暂无数据</text>
+    <text class="g-emptyData-line"></text>
+  </view>
+</template>
+
+<!-- 居中暂无数据 -->
+<template name="middle-emptyData">
+  <view class="g-middle-emptyData mc_peVm">
+    <text class="g-emptyData-text">暂无数据</text>
+  </view>
+</template>
+
+<!--已无更多模板-->
+<template name="noMoreData">
+  <view class="g-noMoreData">
+    <text class="g-noMoreData-line"></text>
+    <text class="g-noMoreData-text">已无更多</text>
+    <text class="g-noMoreData-line"></text>
+  </view>
+</template>
+
+<!--页面加载失败模板-->
+<template name="pageError">
+  <view class="g-pageError">
+    <view class="g-pageError-content mc_peVm">
+      <image class="g-pageError-img" src="../../img/pic-page-error.png" mode="aspectFit"></image>
+      <view class="g-pageError-text1">你要的页面打不开啦~</view>
+      <view class="g-pageError-text2">错误代码：500</view>
+      <view class="g-pageError-text1">请稍后再试</view>
+    </view>
+  </view>
+</template>
+
+<!--loading模板-->
+<template name="loading">
+  <view class='g-loading'></view>
+</template>
+
+<!--提示信息模板-->
+<template name="tips">
+  <view class='g-tips mc_peVm' hidden='{{!tips.state}}'>
+    <view class='g-tips-text'>
+      <text>{{tips.text}}</text>
+    </view>
+  </view>
+</template>
+
+<!-- 公共头部 -->
+<template name="c-head">
+  <view class='c-head-wrap'>
+    <view class='c-head flex -c-center -m-between'>
+      <navigator open-type="navigateBack" class='c-head-img'>
+        <image class='c-head-leftimg' src='../../img/left-code.png'></image>
+      </navigator>
+      <view class='c-head-text'>
+        <text>蓝牙列表</text>
+      </view>
+      <view class='c-head-img'>
+        <image src='../../img/head-right.png'></image>
+      </view>
+    </view>
+  </view>
+</template>

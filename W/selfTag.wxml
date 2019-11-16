@@ -1,0 +1,664 @@
+<!-- 输入框(普通输入框/radio选择/验证码/下拉选择/图片上传)      
+
+     媒体(视频/音频/图片) // 通用(tab下拉/遮罩层/底部分享弹出框/按钮(formId)/item/用户页面)  
+    
+     -->
+
+<!--------------------
+=====▶输入框组件◀======
+---------------------->
+
+<!-- 输入框组件 -->
+
+<view class='input-group'>
+
+  <!--普通输入框-->
+
+  <view class='flex -c-center -m-right c-input'>
+    <view class='c-input-key'>
+      <text>{{name}} :</text>
+    </view>
+    <input placeholder='请输入姓名' class='c-input-value input-color' placeholder-class='input-placeholder-color' bindinput='Event' data-id='input' data-name='name' value='{{pageData.name}}'></input>
+  </view>
+
+  <!-- bindtap="Event" data-id="submit"
+
+    case "input":  
+        that.data.pageData[e.target.dataset.name] = e.detail.value   
+      break
+                            
+    case "submit":       
+      if (notNull()) {
+          
+      }
+      break;  
+
+      // 检验手机号码 
+    
+      function checkMobile() {     
+        if (LL.Config.regular.phone.test(that.data.pageData.Phone)) {       
+          return true  
+        } else {     
+          LL.Tool.showTips("电话号码错误", that)   
+          return false
+        }   
+      }
+    
+      // 检验信息是否填写完成  
+
+      function notNull() {      
+        if (!that.data.pageData.name) {
+          LL.Tool.showTips("请输入账号", that)   
+            return false  
+        } 
+        return true
+      } -->
+
+
+  <!--选择输入框-->
+
+  <view class='flex -c-center -m-right c-input'>
+    <view class='c-input-key'>
+      <text>{{name}} :</text>
+    </view>
+    <view style='width:430rpx;' class='flex -c-center'>
+      <image src='../../img/common/Choose.png' class='imgChoose' hidden='{{pageData.sexIndex==1}}' catchtap='Event' data-id='sex' data-index="0"></image>
+      <image src='../../img/common/noChoose.png' class='imgChoose' hidden='{{pageData.sexIndex==0}}' catchtap='Event' data-id='sex' data-index="0"></image>
+      <text class='radioText'>男</text>
+      <image src='../../img/common/Choose.png' class='imgChoose' style='margin-left:50rpx;' hidden='{{pageData.sexIndex==0}}' catchtap='Event' data-id='sex' data-index="1"></image>
+      <image src='../../img/common/noChoose.png' class='imgChoose' style='margin-left:50rpx;' hidden='{{pageData.sexIndex==1}}' catchtap='Event' data-id='sex' data-index="1"></image>
+      <text class='radioText'>女</text>
+    </view>
+  </view>
+
+  <!-- sexIndex:0
+   
+      case "sex":
+        that.setData({
+          "pageData.sexIndex": e.currentTarget.dataset.index
+        })
+        break -->
+
+  <!-- 验证码输入框 -->
+
+  <view class='flex -c-center -m-right c-input'>
+    <view class='c-input-key'>
+      <text>验证码 :</text>
+    </view>
+    <view class='flex -c-center c-input-value input-color'>
+      <input placeholder='请输入验证码' class='fg1' placeholder-class='input-placeholder-color' bindinput='Event' data-id='input' data-name='code' value='{{pageData.code}}' style='padding-left:0rpx;'></input>
+      <view class='identifyingCode identifyingCode-bgcolor'>
+        <text>{{pageData.Timer}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下拉选择框 -->
+
+  <view class='flex -c-center -m-right c-input'>
+    <view class='c-input-key'>
+      <text>{{name}} :</text>
+    </view>
+    <view class='relative flex -c-center select-group input-color' bindtap='Event' data-id='select'>
+      <text class='fg1'>{{pageData.typeText}}</text>
+      <image class='imgBottom' src='../../img/common/bottom-code.png' hidden='{{pageData.showSelect}}'></image>
+      <image class='imgBottom' src='../../img/common/top-code.png' hidden='{{!pageData.showSelect}}'></image>
+      <view class='input-select-list input-color' hidden="{{!pageData.showSelect}}">
+        <view class='input-select-item' catchtap='Event' wx:for="{{pageData.selectList}}" data-id='selectItem' data-name="{{item}}" data-index="{{index}}">
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- typeText: "请选择类型",
+       showSelect: false,
+       typeIndex: 0
+  
+       case "select":
+         that.setData({
+           "pageData.showSelect": !that.data.pageData.showSelect
+         })
+         break
+       case "selectItem":
+         that.setData({
+           "pageData.typeText": e.currentTarget.dataset.name,
+           "pageData.showSelect": false,
+           "pageData.typeIndex": e.currentTarget.dataset.index
+         })
+         break -->
+
+  <!-- 图片上传 -->
+
+  <view class='flex -m-right c-input' style='line-height:70rpx;'>
+    <view class='c-input-key'>
+      <text>{{name}} :</text>
+    </view>
+    <view class='upload input-color' bindtap='Event' data-id='addImg'>
+      <view>
+        <text>{{message}}</text>
+      </view>
+      <image class='imgUpload' src='../../img/common/upload.png'></image>
+      <image mode='widthFix' src='{{pageData.imgSelect}}' wx:if="{{pageData.imgSelect}}"></image>
+    </view>
+  </view>
+
+</view>
+
+<!--------------------
+=====▶媒体组件◀======
+---------------------->
+
+<!-- 视频(单) -->
+
+<view class='videoView' hidden='{{pageData.showVideo}}' catchtap='Event' data-id='startVideo'>
+  <!-- 视频图片制作: var coverVideo = 视频路径 + "?vframe/jpg/offset/0.1"; -->
+  <image src="{{coverVideo}}" mode='aspectFit' style='width:100%;'></image>
+  <view class='flex -c-center -m-center videoMask'>
+    <image src='../../img/common/startVideo.png' class='imgStartVideo'></image>
+  </view>
+  <!-- 获取视频信息方法: wx.request请求 (url = 视频路径 + ?avinfo) -->
+  <view class='right-time'>
+    <text>{{pageData.rightTime}}</text>
+  </view>
+</view>
+
+<view class='videoView' catchtap='Event' hidden='{{!pageData.showVideo}}'>
+  <video src="url" style='width:100%;' id="video" bindended="Event" data-id='closeVideo'></video>
+</view>
+
+<!-- case "startVideo":
+        that.setData({
+          "pageData.showVideo": true
+        })
+        that.videoContext = wx.createVideoContext("video");
+        that.videoContext.play();
+        break 
+
+      case "closeVideo":
+        that.setData({
+          "pageData.showVideo": false
+        })
+        break  -->
+
+
+<!-- 视频(多) -->
+
+<view class='videoView' hidden='{{item.homework.showVideo}}' catchtap='Event' data-id='startVideo' data-index="{{index}}" data-video="{{item.homework.Video}}">
+  <image src='{{item.homework.videoUrlImg}}' mode='aspectFit' style='width:100%;'></image>
+  <view class='flex -c-center -m-center videoMask'>
+    <image src='../../img/common/startVideo.png' class='imgStartVideo'></image>
+  </view>
+  <view class='right-time'>
+    <text>{{item.homework.rightTime}}</text>
+  </view>
+</view>
+
+<view class='videoView' catchtap='Event' hidden='{{!item.homework.showVideo}}'>
+  <video src="{{item.homework.videoUrl}}" id="{{item.homework.Video}}" bindended="Event" data-id='closeVideo'></video>
+</view>
+
+<!-- case "startVideo":
+        if (that.videoContext) {
+          that.videoContext.seek(0);
+          that.videoContext.pause();
+          that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.showVideo = false;
+        }
+        that.data.ajaxData.listData[e.currentTarget.dataset.index].homework.showVideo = true;
+        that.setData({
+          "ajaxData.listData": that.data.ajaxData.listData,
+          "pageData.videoIndex": e.currentTarget.dataset.index
+        })
+        that.videoContext = wx.createVideoContext(e.currentTarget.dataset.video);
+        that.videoContext.play();
+        break 
+        
+      case "closeVideo":
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.showVideo = false;
+        that.setData({
+          "ajaxData.listData": that.data.ajaxData.listData,
+        })
+        break -->
+
+
+<!-- 音频(单) -->
+
+<view class='audioView flex -c-center -m-between'>
+  <image class='imgAudio' src='../../img/common/stopAudio.png' hidden='{{pageData.showAudio}}' bindtap="audioPlay"></image>
+  <image class='imgAudio' src='../../img/common/runAudio.png' hidden='{{!pageData.showAudio}}' bindtap="audioStop"></image>
+  <view class='time'>
+    <text>{{pageData.startTime?pageData.startTime:"00:00"}}</text>
+  </view>
+  <view class='record'>
+    <slider block-size="12" value="{{pageData.sliderValue}}" step="0.1" max='{{pageData.voiceLength}}' selected-color="#36b0f3" bindchange="sliderListener" bindchanging="sliderChange"></slider>
+  </view>
+  <view class='time'>
+    <text>{{pageData.voicelength}}</text>
+  </view>
+</view>
+
+<!-- 
+  showAudio: false,
+  noStop: true,    // 音频是否中途暂停
+  audioUrl: "",
+  sliderValue: "",
+  startTime: ""
+
+  createVideo: function(value) {
+    var that = this;
+    that.innerAudioContext = wx.createInnerAudioContext();
+    that.innerAudioContext.src = that.data.pageData.audioUrl;
+    if (value) {
+      that.innerAudioContext.seek(value)
+    } else {
+      that.innerAudioContext.seek(0)
+    }
+
+    that.innerAudioContext.onPlay(function() {
+      console.log("开始播放");
+    });
+
+    that.innerAudioContext.onTimeUpdate(function(res) {
+      that.setData({
+        "pageData.sliderValue": that.innerAudioContext.currentTime
+      })
+      var startTime = that.Time(that.innerAudioContext.currentTime);
+      that.setData({
+        "pageData.startTime": startTime
+      })
+    })
+
+    that.innerAudioContext.onEnded(function() {
+      that.setData({
+        "pageData.sliderValue": 0,
+        "pageData.showAudio": false,
+        "pageData.startTime": "",
+        "pageData.noStop": true
+      })
+    })
+  },
+
+  audioPlay: function(e) {
+    var that = this;
+    if (that.data.pageData.noStop) {
+      that.createVideo();
+    }
+    that.innerAudioContext.play();
+    that.setData({
+      "pageData.showAudio": true
+    })
+  },
+
+  audioStop: function() {
+    var that = this;
+    that.innerAudioContext.pause();
+    that.setData({
+      "pageData.showAudio": false,
+      "pageData.noStop": false
+    })
+  },
+
+  sliderListener: function(e) {
+    var that = this;
+    if (!that.data.pageData.showAudio) {
+      that.createVideo(e.detail.value)
+      that.innerAudioContext.play();
+      that.setData({
+        "pageData.showAudio": true
+      })
+    }
+    that.Time(e.detail.value);
+    that.innerAudioContext.seek(e.detail.value);
+  },
+
+  sliderChange: function(e) {
+    that.setData({
+      "pageData.sliderValue": e.detail.value
+    })
+  },
+
+  Time: function(time) {
+    var minute = parseInt(time / 60) > 9 ? parseInt(time / 60) : "0" + parseInt(time / 60);
+    var seconds = parseInt(time % 60) > 9 ? parseInt(time % 60) : "0" + parseInt(time % 60);
+    return minute + ":" + seconds
+  } -->
+
+
+<!-- 音频(多) -->
+
+<view class='audioView flex -c-center -m-between' catchtap='Event'>
+  <image class='imgAudio' src='../../img/common/stopAudio.png' hidden='{{item.homework.voiceStatus}}' catchtap='audioPlay' data-audiourl="{{item.homework.voiceUrl}}" data-index="{{index}}" data-voicelength="{{item.homework.voiceLength}}" data-value="{{item.homework.sliderValue}}"></image>
+  <image class='imgAudio' src='../../img/common/stopAudio.png' hidden='{{!item.homework.voiceStatus}}' catchtap='audioStop'></image>
+  <view class='time'>
+    <text>{{item.homework.startTime?item.homework.startTime:"00:00"}}</text>
+  </view>
+  <view class='record'>
+    <slider selected-color="#36b0f3" block-size="12" step="0.1" value="{{item.homework.sliderValue}}" max='{{item.homework.voiceLength}}' bindchange="sliderListener" bindchanging='sliderChange' data-audiourl="{{item.homework.voiceUrl}}" data-index="{{index}}"
+      data-voicelength="{{item.homework.voiceLength}}"></slider>
+  </view>
+  <view class='time'>
+    <text>{{item.homework.voicelength}}</text>
+  </view>
+</view>
+
+<!-- createVoice: function(audiourl, index, value) {
+    var that = this;
+    // 创建音频
+    that.innerAudioContext = wx.createInnerAudioContext();
+    that.innerAudioContext.src = audiourl;
+    if (value) {
+      that.innerAudioContext.seek(value)
+    }
+
+    that.innerAudioContext.onPlay(function() {
+      console.log("开始播放");
+    });
+
+    that.innerAudioContext.onTimeUpdate(function(res) {
+      that.data.ajaxData.listData[index].homework.sliderValue = that.innerAudioContext.currentTime;
+      that.data.ajaxData.listData[index].homework.startTime = that.Time(that.innerAudioContext.currentTime);
+      that.setData({
+        "ajaxData.listData": that.data.ajaxData.listData
+      })
+    })
+
+    that.innerAudioContext.onEnded(function() {
+      that.data.ajaxData.listData[index].homework.sliderValue = 0;
+      that.data.ajaxData.listData[index].homework.voiceStatus = false;
+      that.data.ajaxData.listData[index].homework.startTime = "";
+      that.setData({
+        "ajaxData.listData": that.data.ajaxData.listData
+      })
+    })
+
+    that.innerAudioContext.onPause(function() {
+      that.setData({
+        "pageData.pauseTime": that.innerAudioContext.currentTime
+      })
+    })
+  },
+
+  audioPlay: function(e) {
+    var that = this;
+
+    // 是否已经播放音频
+
+    if (that.data.pageData.videoIndex != e.currentTarget.dataset.index) {
+      if (that.data.pageData.videoIndex != -1) {
+        that.innerAudioContext.destroy();
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.voiceStatus = false;
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.startTime = "";
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.sliderValue = 0;
+        that.setData({
+          "ajaxData.listData": that.data.ajaxData.listData
+        })
+      }
+      that.createVoice(e.currentTarget.dataset.audiourl, e.currentTarget.dataset.index, 0);
+    } else {
+      if (e.currentTarget.dataset.value == 0) {
+        that.createVoice(e.currentTarget.dataset.audiourl, e.currentTarget.dataset.index, 0);
+      } else {
+        that.createVoice(e.currentTarget.dataset.audiourl, e.currentTarget.dataset.index, that.data.pageData.pauseTime);
+      }
+    }
+
+    that.data.ajaxData.listData[e.currentTarget.dataset.index].homework.voiceStatus = true;
+
+    that.setData({
+      "ajaxData.listData": that.data.ajaxData.listData,
+      "pageData.videoIndex": e.currentTarget.dataset.index
+    })
+
+    that.innerAudioContext.play();
+
+  },
+
+  audioStop: function(e) {
+    var that = this;
+    that.innerAudioContext.pause();
+    that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.voiceStatus = false;
+    that.setData({
+      "ajaxData.listData": that.data.ajaxData.listData
+    })
+  },
+
+  sliderListener: function(e) {
+    var that = this;
+
+    // 是否已经播放音频
+
+    if (that.data.pageData.videoIndex != e.currentTarget.dataset.index) {
+      if (that.data.pageData.videoIndex != -1) {
+        that.innerAudioContext.destroy();
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.voiceStatus = false;
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.startTime = "";
+        that.data.ajaxData.listData[that.data.pageData.videoIndex].homework.sliderValue = 0;
+        that.setData({
+          "ajaxData.listData": that.data.ajaxData.listData,
+        })
+      }
+    } else {
+      if (that.innerAudioContext) {
+        that.innerAudioContext.destroy();
+      }
+    }
+
+    that.createVoice(e.currentTarget.dataset.audiourl, e.currentTarget.dataset.index, e.detail.value);
+    that.innerAudioContext.play();
+    that.data.ajaxData.listData[e.currentTarget.dataset.index].homework.voiceStatus = true;
+
+    that.setData({
+      "ajaxData.listData": that.data.ajaxData.listData,
+      "pageData.videoIndex": e.currentTarget.dataset.index
+    })
+
+  },
+
+  sliderChange: function(e) {
+    that.data.ajaxData.listData[e.currentTarget.dataset.index].homework.sliderValue = e.detail.value;
+    that.setData({
+      "ajaxData.listData": that.data.ajaxData.listData
+    })
+  }, 
+  
+  Time: function(time) {
+    var minute = parseInt(time / 60) > 9 ? parseInt(time / 60) : "0" + parseInt(time / 60);
+    var seconds = parseInt(time % 60) > 9 ? parseInt(time % 60) : "0" + parseInt(time % 60);
+    return minute + ":" + seconds
+  } -->
+
+<!-- 图片(九宫格) -->
+
+<view class='imgView'>
+  <view class='img-wrap'>
+    <view class='mc-img-responsive -img-1by1'>
+      <image src='' class='img-responsive'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 图片(按宽高比例) -->
+
+<view class='mc-img-responsive -img-1by1'>
+  <image src='' class='img-responsive'></image>
+</view>
+
+<!--------------------
+=====▶通用组件◀======
+---------------------->
+
+<!-- tab下拉 -->
+
+<view class='tab-select-wrap'>
+  <view class='tab-select-list flex -m-between'>
+    <view class='tab-select-item flex -c-center relative' wx:for="{{pageData.courseList}}" bindtap='Event' data-id='tab-select' data-index='{{index}}' data-status="{{item.status}}">
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+      <image src='../../img/common/bottom-code.png' class='imgSelect' hidden='{{item.status}}'></image>
+      <image src='../../img/common/top-code.png' class='imgSelect' hidden='{{!item.status}}'></image>
+
+      <view class='tab-displayList' hidden='{{!item.status}}'>
+        <view class='tab-displayItem' wx:for="{{item.selectList}}" wx:for-item="item1" wx:for-index="index1" wx:key="item1" bindtap='Event' data-id='choose' data-index="{{index1}}">
+          <text>{{item1}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- tab下拉选择
+      case "tab-select":
+        if (e.currentTarget.dataset.status) {
+          that.data.pageData.courseList[e.currentTarget.dataset.index].status = false;
+        } else {
+          for (var i = 0; i < that.data.pageData.courseList.length; i++) {
+            that.data.pageData.courseList[i].status = false;
+          }
+          that.data.pageData.courseList[e.currentTarget.dataset.index].status = true;
+        }
+        that.setData({
+          "pageData.courseList": that.data.pageData.courseList
+        })
+        break -->
+
+<!-- 遮罩层 -->
+
+<view class='mask mc_peVm' hidden='{{pageData.showMask}}' bindtap='Event' data-id='close'>
+  <view class='middle-mask'>
+    <view class='flex -m-right'>
+      <image class='imgClose' src='../../img/common/close.png' bindtap='Event' data-id='close'></image>
+    </view>
+  </view>
+</view>
+
+<!-- case "close":
+        that.setData({
+          "pageData.showMask": true
+        })
+        break -->
+
+<!-- 底部分享弹出框 -->
+
+<view class='mask' hidden='{{!pageData.showMask}}' bindtap='Event' data-id='closeShare'></view>
+
+<view class="animationShare" animation="{{pageData.animationShare}}">
+  <button open-type='share' class='anShareItem'>
+    <text>邀请微信好友</text>
+  </button>
+  <view class='anShareItem' bindtap='Event'>
+    <text>生成分享图片</text>
+  </view>
+  <view class='anShareItem' bindtap='Event' data-id='closeShare' style='margin-top:10px;margin-bottom:0;'>
+    <text>取消</text>
+  </view>
+</view>
+
+<!-- bindtap='Event' data-id='showShare'
+
+    var show = wx.createAnimation({
+      duration: 400,
+      timingFunction: 'ease'
+    })
+    var hide = wx.createAnimation({
+      duration: 400,
+      timingFunction: 'ease'
+    })
+    show.bottom(0).step();
+    hide.bottom(-146).step();
+
+      case "showShare":
+        that.setData({
+          "pageData.animationShare": show.export(),
+          "pageData.showMask": true
+        })
+        break
+      case "closeShare":
+        that.setData({
+          "pageData.animationShare": hide.export(),
+          "pageData.showMask": false
+        })
+        break -->
+
+<view class="animationShare" animation="{{pageData.animationtoRemove}}" style='height:92px;bottom:-92px;'>
+  <view class='anShareItem'>
+    <text>删除</text>
+  </view>
+  <view class='anShareItem' bindtap='Event' data-id='closeShare'>
+    <text>取消</text>
+  </view>
+</view>
+
+<!-- var showRemove = wx.createAnimation({
+      duration: 400,
+      timingFunction: 'ease'
+    })
+    var hideRemove = wx.createAnimation({
+      duration: 400,
+      timingFunction: 'ease'
+    })
+    showRemove.bottom(0).step();
+    hideRemove.bottom(-92).step();
+
+      case "showShare":
+        that.setData({
+          "pageData.animationShare": showRemove.export(),
+          "pageData.showMask": true
+        })
+        break
+      case "closeShare":
+        that.setData({
+          "pageData.animationShare": hideRemove.export(),
+          "pageData.showMask": false
+        })
+        break -->
+
+
+<!-- 常用item(左图右文字介绍) -->
+
+<view class='item flex -c-center'>
+  <image class='leftItem' src=''></image>
+  <view class='fg1 rightItem'></view>
+</view>
+
+<!-- 按钮 -->
+
+<view class='c-btn btn-bgcolor'>
+  <text>{{name}}</text>
+</view>
+
+<view class='c-btn-wrap'>
+  <view class='c-btn btn-bgcolor'>
+    <text>{{name}}</text>
+  </view>
+</view>
+
+<!-- 底部按钮 -->
+
+<view class='bottom-wrap'>
+  <view class='bottom-btn btn-bgcolor'>{{name}}</view>
+</view>
+
+<!-- 用于微信服务(e.detail.formId) -->
+
+<!-- 注释:小程序的消息模板form_id只能发送给提交这个form_id的人 -->
+
+<view class='fixed-btn'>
+  <form bindsubmit='Event' data-id='submit' report-submit="true">
+    <button formType="submit" class='c-btn btn-bgcolor'>{{name}}</button>
+  </form>
+</view>
+
+<!-- 用户页面 -->
+
+<view class='userHead'>
+  <image class='userbgImg' src='' mode='aspectFill'></image>
+  <view class='user-wrap flex -c-center'>
+    <view style='width:100%;'>
+      <image class='userImg' src=''></image>
+      <view class='userHText'>
+        <text>{{name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

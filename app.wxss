@@ -1,0 +1,1064 @@
+/**app.wxss**/
+
+/** 引入LL样式文件 **/
+@import "LL/LL.wxss";
+@import "W/W.wxss";
+@import "W/selfTag.wxss";
+
+/* 明信片公用样式 */
+
+.bgpic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0;
+}
+
+.left-input {
+  position: absolute;
+  left: 40rpx;
+  top: 60rpx;
+  width: 330rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 33rpx;
+  padding: 0 15rpx;
+  color: black;
+  border: 2px dashed #ae81b4;
+}
+
+.right-absolute {
+  position: absolute;
+  right: 60rpx;
+  top: 560rpx;
+  width: 330rpx;
+  height: 70rpx;
+}
+
+.right-input {
+  width: 100%;
+  height: 100%;
+  line-height: 70rpx;
+  font-size: 33rpx;
+  color: black;
+  text-align: right;
+  padding: 0 15rpx;
+  border: 2px dashed #ae81b4;
+}
+
+.bo-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.btn {
+  background-color: #955a9c;
+  width: 530rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  margin: 0 auto;
+  color: white;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+/** 公共资源 **/
+
+.relative {
+  position: relative;
+}
+
+.font-12-light {
+  font-size: 12px !important;
+  color: #999;
+}
+
+.font-12-white {
+  font-size: 12px !important;
+  color: #fff;
+}
+
+.font-12-other1 {
+  font-size: 12px !important;
+  color: #bebebe;
+}
+
+.font-12-gray {
+  font-size: 12px !important;
+  color: #666;
+}
+
+.font-12-deep {
+  font-size: 12px !important;
+  color: #333;
+}
+
+.font-12-red {
+  font-size: 12px !important;
+  color: #e94b45;
+}
+
+.font-12-blue {
+  font-size: 12px !important;
+  color: #5b81b9;
+}
+
+.font-12-green {
+  font-size: 12px !important;
+  color: #00a300;
+}
+
+.font-14-blue {
+  font-size: 14px !important;
+  color: #5b81b9;
+}
+
+.font-14-light {
+  font-size: 14px !important;
+  color: #999;
+}
+
+.font-14-gray {
+  font-size: 14px !important;
+  color: #888;
+}
+
+.font-14-dark {
+  font-size: 14px !important;
+  color: #444;
+}
+
+.font-14-deep {
+  font-size: 14px !important;
+  color: #333;
+}
+
+.font-15-red {
+  font-size: 15px !important;
+  color: #e94b45;
+}
+
+.font-15-dark {
+  font-size: 15px !important;
+  color: #444;
+}
+
+.font-16-white {
+  font-size: 16px !important;
+  color: #fff;
+}
+
+.font-16-light {
+  font-size: 16px !important;
+  color: #999;
+}
+
+.font-16-dark {
+  font-size: 16px !important;
+  color: #444;
+}
+
+.font-16-deep {
+  font-size: 16px !important;
+  color: #333;
+}
+
+.font-16-other1 {
+  font-size: 16px !important;
+  color: #888;
+}
+
+.font-16-red {
+  font-size: 16px !important;
+  color: #e94b45;
+}
+
+.font-16-green {
+  font-size: 16px !important;
+  color: #00a300;
+}
+
+.font-16-blue {
+  font-size: 16px !important;
+  color: #5b81b9;
+}
+
+.font-16-yellow {
+  font-size: 16px !important;
+  color: #ff8f22;
+}
+
+.font-18-white {
+  font-size: 18px !important;
+  color: #fff;
+}
+
+/*新增加  */
+
+.font-22-black {
+  font-size: 22rpx !important;
+  color: #333;
+}
+
+.font-22-white {
+  font-size: 22rpx !important;
+  color: #fff;
+}
+
+.font-2-grey {
+  font-size: 22rpx !important;
+  color: #999;
+}
+
+.font-22-red {
+  font-size: 22rpx !important;
+  color: #e13e18;
+}
+
+.font-24-black {
+  font-size: 24rpx !important;
+  color: #333;
+}
+
+.font-24-white {
+  font-size: 24rpx !important;
+  color: #fff;
+}
+
+.font-24-grey {
+  font-size: 24rpx !important;
+  color: #999;
+}
+
+.font-24-red {
+  font-size: 24rpx !important;
+  color: #e13e18;
+}
+
+.font-26-black {
+  font-size: 26rpx !important;
+  color: #333;
+}
+
+.font-26-white {
+  font-size: 26rpx !important;
+  color: #fff;
+}
+
+.font-26-666 {
+  font-size: 26rpx !important;
+  color: #666;
+}
+
+.font-26-grey {
+  font-size: 26rpx !important;
+  color: #999;
+}
+
+.font-26-red {
+  font-size: 26rpx !important;
+  color: #e13e18;
+}
+
+.font-28-666 {
+  font-size: 28rpx !important;
+  color: #666;
+}
+
+.font-28-black {
+  font-size: 28rpx !important;
+  color: #333;
+}
+
+.font-28-grey {
+  font-size: 28rpx !important;
+  color: #999;
+}
+
+.font-28-grey {
+  font-size: 28rpx !important;
+  color: #999;
+}
+
+.font-28-888 {
+  font-size: 28rpx !important;
+  color: #888;
+}
+
+.font-30-white {
+  font-size: 30rpx !important;
+  color: #fff;
+}
+
+.font-30-black {
+  font-size: 30rpx !important;
+  color: #333;
+}
+
+.font-30-grey {
+  font-size: 30rpx !important;
+  color: #999;
+}
+
+.font-30-red {
+  font-size: 30rpx !important;
+  color: #f00;
+}
+
+.font-30-yellow {
+  font-size: 30rpx !important;
+  color: #ffb202;
+}
+
+.font-32-white {
+  font-size: 32rpx !important;
+  color: #fff;
+}
+
+.font-32-black {
+  font-size: 32rpx !important;
+  color: #333;
+}
+
+.font-32-grey {
+  font-size: 32rpx !important;
+  color: #999;
+}
+
+.font-32-yellow {
+  font-size: 32rpx !important;
+  color: #ffb202;
+}
+
+.font-34-black {
+  font-size: 34rpx !important;
+  color: #333;
+}
+
+.font-34-grey {
+  font-size: 34rpx !important;
+  color: #999;
+}
+
+.font-34-yellow {
+  font-size: 34rpx !important;
+  color: #ffb202;
+}
+
+.font-34-red {
+  font-size: 34rpx !important;
+  color: #e93c3e;
+}
+
+.font-34-white {
+  font-size: 34rpx !important;
+  color: #fff;
+}
+
+.font-36-black {
+  font-size: 36rpx !important;
+  color: #333;
+}
+
+.font-36-grey {
+  font-size: 36rpx !important;
+  color: #999;
+}
+
+.font-36-yellow {
+  font-size: 36rpx !important;
+  color: #ffb202;
+}
+
+.font-36-red {
+  font-size: 36rpx !important;
+  color: #e93c3e;
+}
+
+.font-38-black {
+  font-size: 36rpx !important;
+  color: #333;
+}
+
+.font-40-black {
+  font-size: 40rpx !important;
+  color: #333;
+}
+
+.font-44-white {
+  font-size: 44rpx !important;
+  color: #fff;
+}
+
+/* 手机号码输入框 */
+
+.input-phone {
+  border: 1rpx #41a5aa solid;
+  border-radius: 6rpx;
+  width: 517rpx;
+  height: 86rpx;
+  padding-left: 0;
+  text-align: center;
+  color: #71c7c8;
+  font-size: 26rpx;
+}
+
+.input-placeholder-color {
+  color: #71c7c8;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+/* 领取按钮 */
+
+.freeGet {
+  margin-top: 20rpx !important;
+}
+
+.freeGet>button {
+  background: #41a5aa;
+  width: 519rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* .title-box {
+  margin: 30rpx 0 43rpx 0;
+} */
+
+.bold {
+  font-weight: bold;
+}
+
+/* 公共图标 */
+
+.ic-phone {
+  width: 13px;
+  height: 19px;
+}
+
+.ic-lock {
+  width: 15px;
+  height: 18px;
+}
+
+.ic-eye {
+  width: 20px;
+  height: 12px;
+}
+
+.ic-right {
+  width: 22px;
+  height: 15px;
+}
+
+.ic-select {
+  width: 15px;
+  height: 15px;
+}
+
+.ic-unselect {
+  width: 15px;
+  height: 15px;
+}
+
+.ic-person {
+  width: 16px;
+  height: 18px;
+}
+
+.ic-safe {
+  width: 16px;
+  height: 18px;
+}
+
+.ic-info {
+  width: 16px;
+  height: 16px;
+}
+
+.ic-arrow-right {
+  width: 8px;
+  height: 13px;
+}
+
+.ic-look {
+  width: 19px;
+  height: 8px;
+}
+
+.ic-password {
+  width: 18px;
+  height: 18px;
+}
+
+.ic-star-r {
+  width: 14px;
+  height: 12px;
+}
+
+.ic-star-g {
+  width: 14px;
+  height: 12px;
+}
+
+.ic-help {
+  width: 13px;
+  height: 13px;
+}
+
+.i-star-white {
+  width: 20px;
+  height: 19px;
+}
+
+.ic-close {
+  width: 16px;
+  height: 16px;
+}
+
+.ic-num1 {
+  width: 17px;
+  height: 22px;
+}
+
+.ic-num2 {
+  width: 17px;
+  height: 22px;
+}
+
+.ic-num3 {
+  width: 17px;
+  height: 22px;
+}
+
+.i-star-white {
+  width: 20px;
+  height: 19px;
+}
+
+.ic-tel {
+  width: 11px;
+  height: 11px;
+}
+
+.ic-search {
+  width: 16px;
+  height: 16px;
+}
+
+.ic-item1 {
+  width: 28px;
+  height: 28px;
+}
+
+.ic-item2 {
+  width: 27px;
+  height: 27px;
+}
+
+.ic-item3 {
+  width: 26px;
+  height: 26px;
+}
+
+.ic-item4 {
+  width: 26px;
+  height: 26px;
+}
+
+.ic-item5 {
+  width: 28px;
+  height: 28px;
+}
+
+.ic-item6 {
+  width: 25px;
+  height: 25px;
+}
+
+.ic-item7 {
+  width: 28px;
+  height: 26px;
+}
+
+.ic-item8 {
+  width: 28px;
+  height: 28px;
+}
+
+.ic-item9 {
+  width: 28px;
+  height: 25px;
+}
+
+.ic-arrow-down {
+  width: 12px;
+  height: 6px;
+}
+
+.ic-dot-red {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #f55f65;
+}
+
+.ic-dot-blue {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #448aca;
+}
+
+.ic-dot-gray {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #ccc;
+}
+
+.pic-text-8 {
+  width: 114rpx;
+  height: 26rpx;
+}
+
+.pic-bg-10 {
+  width: 134rpx;
+  height: 35rpx;
+}
+
+.ic-down-b {
+  width: 20rpx;
+  height: 11rpx;
+}
+
+.ic-talk {
+  width: 38rpx;
+  height: 36rpx;
+}
+
+/* 公共表单样式 */
+
+.g-form-box {
+  width: 100%；;
+}
+
+.g-form {
+  width: 100%;
+}
+
+.g-ipt-box:first-child {
+  border-top: 1px solid #e6e6e6;
+}
+
+.g-ipt-box {
+  width: 100%;
+  padding: 7px 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.g-ipt-left {
+  width: 40px;
+  text-align: center;
+}
+
+.g-ipt-center {
+  padding: 0 10px;
+}
+
+.g-ipt {
+  width: 100%;
+  height: 30px;
+  padding: 0 5px;
+}
+
+.g-placeholder {
+  font-size: 16px;
+  color: #999;
+}
+
+.g-ipt-tip {
+  width: 30px;
+  text-align: center;
+}
+
+.g-form-btn {
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.g-btn {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #e94b45;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.g-btn-active {
+  background-color: #ff524c !important;
+  color: white;
+}
+
+.g-password-look {
+  line-height: 30px;
+}
+
+/* 公共底部工具栏 */
+
+.g-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.g-bottom-btn {
+  height: 45px;
+  line-height: 45px;
+  background-color: #e94b45;
+  border-radius: 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* 公共弹窗 */
+
+.g-pop-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.g-pop-content {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  padding-top: 36px;
+  background-color: #fff;
+  border-radius: 8px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.g-pop-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+}
+
+.g-pop-confirm {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #e94b45;
+  border-radius: 0;
+}
+
+/* 标题黑体 */
+
+.font-family-black {
+  font-family: "黑体";
+}
+
+/* 通用文字上下padding */
+
+.text-padding {
+  padding: 8rpx 0 18rpx 0;
+}
+
+/* 位置图标 */
+
+.icon-position {
+  width: 22rpx;
+  height: 29rpx;
+}
+
+/* 日期图标 */
+
+.icon-date {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* 更多图标 */
+
+.more .img-box {
+  width: 6rpx;
+  height: 29rpx;
+}
+
+/* 文字图片垂直居中 */
+
+.text-center {
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+/* 活动列表 */
+
+.event-bottom {
+  padding: 10rpx 30rpx;
+}
+
+.event-list, .process-list {
+  margin-top: 20rpx;
+}
+
+.event-item {
+  padding: 20rpx 0;
+  border-top: 1px solid #ebebeb;
+}
+
+.event-img {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.event-right {
+  margin-left: 30rpx;
+  padding: 10rpx 0;
+}
+
+/*点击显示全部信息 */
+
+.delta {
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotate(45deg);
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin: 0 auto;
+  margin-bottom: -20rpx;
+}
+
+.showInfo {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 80rpx;
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  background-color: #f9f9f9;
+  z-index: 1000;
+}
+
+/* 红点 */
+
+.dot-red {
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #e94b45;
+  border-radius: 50%;
+}
+
+/* 底部固定按钮 */
+
+.bottomButton-wrap {
+  width: 100%;
+  height: 100rpx;
+  /* position: fixed;
+  bottom: 0; */
+}
+
+.bottomButton {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 60rpx 0 0 0 0 #858484;
+}
+
+.whiteButton {
+  background-color: #fff;
+}
+
+.redButton {
+  background-color: #e3393c;
+}
+
+.icon-tel {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.icon-clock {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+/* 预约弹出框 */
+
+.middle-mask {
+  padding: 40rpx;
+}
+
+.middle-mask .ic-close {
+  width: 16px;
+  height: 16px;
+}
+
+.middle-mask .g-ipt-box {
+  border: 1px solid #ccc;
+}
+
+.middle-mask .redButton {
+  margin: 30rpx 0 10rpx 0;
+  padding: 20rpx 0;
+}
+
+/* 背景颜色 */
+
+Page {
+  /* background-color: #cff0f0; */
+}
+
+/* 顶部图片文字 */
+
+.top-title {
+  width: 100%;
+  height: 163rpx;
+}
+
+/* logo */
+
+.logo {
+  margin: 0 auto;
+  margin-top: 25rpx;
+  width: 696rpx;
+  height: 650rpx;
+}
+
+/* 输入框和按钮 */
+
+.from-phone {
+  margin-top: 30rpx;
+}
+
+/* 通用按钮 */
+
+.common-button {
+  border-radius: 6rpx;
+  background: #41a5aa;
+  width: 519rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 好友品鉴 */
+
+.friends {
+  margin-top: 100rpx;
+}
+
+/* 方块图标 */
+
+.ic-square {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/* 底部内容 */
+
+/* 未邀请好友 */
+
+.friends-list {
+  border-radius: 13rpx;
+  background: #fff;
+  width: 690rpx;
+  /* height: 746rpx; */
+  margin: 55rpx auto 140rpx auto;
+}
+
+/* 邀请到好友 */
+
+.friends-list-invited {
+  border-radius: 13rpx;
+  background: #fff;
+  width: 690rpx;
+  margin: 65rpx auto 60rpx auto;
+}
+
+/* 用户信息 */
+
+.userInfo {
+  padding: 30rpx;
+}
+
+.ic-head {
+  width: 90rpx;
+  height: 90rpx;
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+
+/* 未邀请到好友显示内容 */
+
+.invite-text {
+  color: #41a5aa;
+  font-size: 30rpx;
+  padding-left: 40rpx;
+}
+
+.nofriends {
+  margin: 0 auto;
+  padding-top: 25rpx;
+  width: 390rpx;
+  height: 319rpx;
+}
+
+.invite-button {
+  margin-top: 60rpx;
+}
+
+/* 列表项  */
+
+.friends-list-item {
+  border-bottom: #ccc solid 1px;
+}
+
+.friends-list-item:last-child {
+  border-bottom: none;
+}
+
+/* 分割线 */
+
+.dividers {
+  background: #fff0e3;
+  width: 100%;
+  height: 20rpx;
+  line-height: 20rpx;
+}

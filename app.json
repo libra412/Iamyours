@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/choose",
+    "pages/index/send",
+    "pages/index/getUserInfo",
+    "pages/index/write",
+    "pages/index/web-view"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#41a5aa",
+    "navigationBarTitleText": "漂流明信片",
+    "navigationBarTextStyle": "white"
+  }
+}

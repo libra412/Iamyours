@@ -1,0 +1,383 @@
+/* 全局样式/布局(flex/display/inline-block)/文字(text-align/text-ellipsis)/图片(mc-img-responsive)/遮罩层(mask) */
+
+/* 模版(返回头部/暂无数据/已无数据/信息提示) */
+
+/* 全局样式 */
+
+view, scroll-view, swiper, movable-area, cover-view, icon, text, rich-text,
+progress, button, checkbox-group, checkbox, form, input, label, picker,
+picker-view, radio-group, slider, switch, textarea, navigator, audio, image,
+video, map, canvas, contact-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+button {
+  border: none;
+}
+
+button::after {
+  border: none;
+}
+
+navigator {
+  display: inline;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+/*************
+
+--- 布局样式 ---
+
+**************/
+
+/* flex */
+
+.flex {
+  display: flex;
+}
+
+.fg1 {
+  flex: 1;
+}
+
+.fg2 {
+  flex: 2;
+}
+
+.-m-left {
+  justify-content: flex-start;
+}
+
+.-m-center {
+  justify-content: center;
+}
+
+.-m-right {
+  justify-content: flex-end;
+}
+
+.-m-between {
+  justify-content: space-between;
+}
+
+.-m-around {
+  justify-content: space-around;
+}
+
+.-c-top {
+  align-items: flex-start;
+}
+
+.-c-center {
+  align-items: center;
+}
+
+.-c-bottom {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.alignT {
+  align-self: flex-start;
+}
+
+.alignM {
+  align-self: center;
+}
+
+.alignB {
+  align-self: flex-end;
+}
+
+/* display */
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.relative {
+  position: relative;
+}
+
+/* inline-block */
+
+.dt {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dm {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.db {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/*************
+
+--- 文字样式 ---
+
+**************/
+
+/* 对齐 */
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+/* 省略号 */
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+
+.text-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+
+/* 显示形式 */
+
+.sub {
+  vertical-align: sub;
+}
+
+.sup {
+  vertical-align: super;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* 图标 */
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 图片盒子 */
+
+.img-box {
+  font-size: 0;
+}
+
+/* 图片比例 */
+
+.mc-img-responsive {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.-img-1by1 {
+  padding-bottom: 100%;
+}
+
+.-img-2by1 {
+  padding-bottom: 50%;
+}
+
+.-img-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.-img-16by10 {
+  padding-bottom: 62.5%;
+}
+
+.-img-4by3 {
+  padding-bottom: 75%;
+}
+
+.-img-25by12 {
+  padding-bottom: 48%;
+}
+
+.img-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*************
+
+---- 遮罩层 ----
+
+**************/
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 99;
+}
+
+.mc_peVm::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+}
+
+.middle-mask {
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: white;
+  border-radius: 14rpx;
+  padding: 10rpx;
+  overflow: hidden;
+}
+
+.imgClose {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/*************
+
+--- 模版样式 --- 
+
+**************/
+
+/* 返回头部 */
+
+.c-head-wrap {
+  height: 90rpx;
+  width: 100%;
+}
+
+.c-head {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 20rpx;
+  z-index: 10000;
+}
+
+.c-head-text {
+  width: 300rpx;
+  text-align: center;
+  color: white;
+  font-size: 35rpx;
+}
+
+.c-head-img {
+  width: 50rpx;
+  height: 40rpx;
+}
+
+.c-head-leftimg {
+  height: 100%;
+  width: 25rpx;
+}
+
+/* 暂无数据 */
+
+.template-middle-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 10000;
+}
+
+.template-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px;
+  font-size: 14px;
+  color: #888;
+  line-height: 25px;
+}
+
+/* 已无数据 */
+
+.template-noData {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.template-line {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  border-bottom: 1px solid #888;
+}
+
+/* 信息提示 */
+
+.template-tips-text {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 60%;
+  padding: 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10rpx;
+  z-index: 100;
+}

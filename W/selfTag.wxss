@@ -1,0 +1,395 @@
+/* 初始化样式
+
+   输入框(普通输入框/radio选择/验证码/下拉选择/图片上传)  
+  
+   媒体样式(视频/音频/图片)
+
+   通用样式(tab下拉/底部分享弹出框/item/按钮/用户页面)
+   
+ */
+
+/* 初始背景色 */
+
+.head-bgcolor {
+  background-color: red;
+}
+
+.btn-bgcolor {
+  background-color: gray;
+}
+
+.input-placeholder-color {
+  color: rgb(220, 220, 220);
+}
+
+.input-color {
+  background-color: white;
+  border: 1px solid rgb(220, 220, 220);
+  color: rgb(220, 220, 220);
+}
+
+.radioText {
+  color: rgb(220, 220, 220);
+}
+
+.identifyingCode-bgcolor {
+  background-color: red;
+}
+
+/*************
+
+-- 输入框样式 --
+
+**************/
+
+/* 公用input输入框 */
+
+.input-group {
+  padding: 20rpx 120rpx 0 0;
+  font-size: 30rpx;
+}
+
+.c-input {
+  margin-top: 30rpx;
+}
+
+.c-input-key {
+  text-align: right;
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.c-input-value {
+  border-radius: 15rpx;
+  width: 430rpx;
+  height: 70rpx;
+  overflow: hidden;
+  padding-left: 20rpx;
+}
+
+/* radio选择 */
+
+.imgChoose {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+/* 验证码 */
+
+.identifyingCode {
+  text-align: center;
+  width: 180rpx;
+  color: white;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+/* 下拉选择 */
+
+.select-group {
+  border-radius: 15rpx;
+  width: 430rpx;
+  height: 70rpx;
+  padding-left: 20rpx;
+}
+
+.imgBottom {
+  width: 20rpx;
+  height: 15rpx;
+  margin-right: 30rpx;
+}
+
+.input-select-list {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 70rpx;
+  z-index: 10000;
+  padding: 0 20rpx;
+}
+
+.input-select-item {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.input-select-item:last-child {
+  border-bottom: none;
+}
+
+/* 文件上传 */
+
+.upload {
+  border-radius: 15rpx;
+  width: 430rpx;
+  padding: 15rpx 20rpx;
+}
+
+.imgUpload {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+}
+
+/*************
+
+--- 媒体样式 ---
+
+**************/
+
+/* 视频 */
+
+.videoView {
+  height: 225px;
+  width: 100%;
+  margin-bottom: 20rpx;
+  position: relative;
+  background-color: black;
+}
+
+.videoMask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.imgStartVideo {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.right-time {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #7d7d7d;
+  height: 35rpx;
+  line-height: 35rpx;
+  width: 80rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: white;
+}
+
+/* 音频 */
+
+.audioView {
+  padding: 20rpx;
+  background-color: #fcfcfc;
+  border-radius: 7rpx;
+  border-width: 1px;
+  border-color: rgb(246, 246, 246);
+  border-style: solid;
+}
+
+.imgAudio {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.audio-img {
+  height: 20rpx;
+  width: 520rpx;
+}
+
+.record {
+  width: 320rpx;
+  margin: 0 20rpx;
+}
+
+.time {
+  font-size: 22rpx;
+  color: #4e4e4e;
+}
+
+/* 图片 */
+
+.imgView {
+  margin: -10rpx;
+  margin-right: -20rpx;
+}
+
+.img-wrap {
+  display: inline-block;
+  width: 33%;
+  padding: 10rpx;
+}
+
+/*************
+
+--- 通用样式 ---
+
+**************/
+
+/* tab下拉 */
+
+.tab-select-wrap {
+  height: 90rpx;
+}
+
+.tab-select-list {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: white;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.tab-select-item {
+  line-height: 90rpx;
+  padding: 0 30rpx;
+  color: #666;
+  font-size: 30rpx;
+}
+
+.tab-displayList {
+  position: absolute;
+  top: 80rpx;
+  left: -5rpx;
+  width: 150rpx;
+  border: 1px solid #dcdcdc;
+  padding: 0 10rpx;
+  text-align: center;
+  background-color: white;
+  z-index: 10000;
+}
+
+.tab-displayItem {
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #666;
+  border-bottom: 1px solid #f18201;
+}
+
+.tab-displayItem:last-child {
+  border-bottom: none;
+}
+
+.imgSelect {
+  width: 20rpx;
+  height: 15rpx;
+  margin-left: 10rpx;
+}
+
+/* 底部分享弹出框 */
+
+.animationShare {
+  background-color: #f5f5f5;
+  position: fixed;
+  bottom: -146px;
+  bottom: 0;
+  width: 100%;
+  height: 146px;
+  z-index: 10002;
+}
+
+.anShareItem {
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  line-height: 45px;
+  text-align: center;
+  font-size: 28rpx;
+  margin-bottom: 2px;
+}
+
+/* 列表样式 */
+
+.item {
+  padding: 20rpx;
+}
+
+.leftItem {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.rightItem {
+  margin-left: 20rpx;
+}
+
+/* 按钮 */
+
+.c-btn-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 80rpx;
+}
+
+.c-btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  border-radius: 13rpx;
+  width: 620rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top: 80rpx;
+  font-size: 36rpx;
+}
+
+/* 底部按钮 */
+
+.bottom-wrap {
+  height: 90rpx;
+  width: 100%;
+}
+
+.bottom-btn {
+  position: fixed;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: white;
+}
+
+/* 用户信息 */
+
+.userHead {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.userbgImg {
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.user-wrap {
+  position: absolute;
+  width: 100%;
+  height: 300rpx;
+}
+
+.userImg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.userHText {
+  text-align: center;
+  color: white;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,49 @@
+<!--------------------
+====▶项目模版文件◀====
+---------------------->
+
+<!-- <import src="../../LL/LL.wxml" />
+<template is="tips" data = "{{...pageData}}" />
+LL.Tool.showTips("提交成功", that) -->
+
+<!-- 公共头部 -->
+<template name="head">
+  <view class='c-head-wrap'>
+    <view class='c-head flex -c-center -m-between head-bgcolor'>
+      <navigator open-type="navigateBack" class='c-head-img'>
+        <image class='c-head-leftimg' src='../../img/common/left-code.png' wx:if="{{HeadLeftImg}}"></image>
+      </navigator>
+      <view class='c-head-text'>
+        <text>{{HeadName}}</text>
+      </view>
+      <view class='c-head-img'>
+        <!-- <image src='../../img/head-right.png' wx:if="{{HeadRightImg}}"></image> -->
+      </view>
+    </view>
+  </view>
+</template>
+
+<!-- 暂无数据 -->
+<template name="emptyData">
+  <view class="template-middle-mask mc_peVm">
+    <text class="template-text">暂无数据</text>
+  </view>
+</template>
+
+<!--已无更多模板-->
+<template name="noMoreData">
+  <view class="template-noData">
+    <text class="template-line"></text>
+    <text class="template-text">已无更多</text>
+    <text class="template-line"></text>
+  </view>
+</template>
+
+<!--提示信息模板-->
+<template name="tips">
+  <view class='template-middle-mask mc_peVm' hidden='{{!tips.state}}'>
+    <view class='template-tips-text'>
+      <text>{{tips.text}}</text>
+    </view>
+  </view>
+</template>

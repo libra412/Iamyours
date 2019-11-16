@@ -1,0 +1,571 @@
+/*****************
+----公共样式库----
+******************/
+
+/*****************
+----全局样式控制----
+******************/
+
+/**盒子模型**/
+
+view, scroll-view, swiper, movable-area, cover-view, icon, text, rich-text,
+progress, button, checkbox-group, checkbox, form, input, label, picker,
+picker-view, radio-group, slider, switch, textarea, navigator, audio, image,
+video, map, canvas, contact-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+text, .text {
+  word-break: break-all;
+  text-align: justify;
+}
+
+navigator {
+  display: inline;
+}
+
+/**输入框间距**/
+
+/* input {
+  padding: 0 5px;
+} */
+
+textarea {
+  padding: 3px 5px;
+}
+
+button {
+  border: none;
+}
+
+image {
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 0;
+}
+
+/**************
+----布局相关----
+***************/
+
+/**flex布局**/
+
+.flex {
+  display: flex;
+}
+
+.fg1 {
+  min-width: 0;
+  flex: 1;
+}
+
+.fg2 {
+  min-width: 0;
+  flex: 2;
+}
+
+.-c-center {
+  align-items: center;
+}
+
+.-c-top {
+  align-items: flex-start;
+}
+
+.-c-bottom {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.-m-left {
+  justify-content: flex-start;
+}
+
+.-m-center {
+  justify-content: center;
+}
+
+.-m-right {
+  justify-content: flex-end;
+}
+
+.-m-between {
+  justify-content: space-between;
+}
+
+.-m-around {
+  justify-content: space-around;
+}
+
+/**float布局**/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearf {
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/**行内块元素布局**/
+
+.hf {
+  font-size: 0;
+}
+
+.ftp {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.fp {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fbp {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/**对齐**/
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+/**显示方式**/
+
+.inline-box {
+  display: inline;
+}
+
+.inlineblock-box {
+  display: inline-block;
+}
+
+.block-box {
+  display: block;
+}
+
+/**************
+----遮罩层----
+***************/
+
+/* 遮罩层 */
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 10000;
+}
+
+/* 通过伪类元素垂直居中 */
+
+.mc_peVm::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+  visibility: hidden;
+}
+
+.middle-mask {
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: white;
+  border-radius: 14rpx;
+}
+
+/**************
+----文本----
+***************/
+
+/* 超出内容省略号表示 */
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sub {
+  vertical-align: sub;
+}
+
+.sup {
+  vertical-align: super;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/**************
+----图片----
+***************/
+
+/* 图标 */
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 图片盒子 */
+
+.img-box {
+  font-size: 0;
+}
+
+/* 图片比例 */
+
+.mc-img-responsive {
+  position: relative;
+  height: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.-img-1by1 {
+  padding-bottom: 100%;
+}
+
+.-img-2by1 {
+  padding-bottom: 50%;
+}
+
+.-img-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.-img-16by10 {
+  padding-bottom: 62.5%;
+}
+
+.-img-4by3 {
+  padding-bottom: 75%;
+}
+
+.-img-25by12 {
+  padding-bottom: 48%;
+}
+
+/**************
+---模块提示框----
+***************/
+
+/* 弹出层公用样式 */
+
+.g-pop-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.g-pop-box {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**暂无数据模板**/
+
+.g-emptyData {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.g-emptyData-line {
+  display: inline-block;
+  width: 80px;
+  border-bottom: 1px solid #888;
+  vertical-align: middle;
+}
+
+.g-emptyData-text {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 14px;
+  color: #888;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+/* 居中暂无数据模板 */
+
+.g-middle-emptyData {
+  position: fixed;
+  top: 200rpx;
+  left: 0;
+  right: 0;
+  bottom: 200rpx;
+  text-align: center;
+}
+
+/**已无更多模板**/
+
+.g-noMoreData {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.g-noMoreData-line {
+  display: inline-block;
+  width: 80px;
+  border-bottom: 1px solid #888;
+  vertical-align: middle;
+}
+
+.g-noMoreData-text {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 14px;
+  color: #888;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+/**页面加载失败模板**/
+
+.g-pageError {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fff;
+  text-align: center;
+}
+
+.g-pageError-content {
+  display: inline-block;
+  width: 250px;
+  vertical-align: middle;
+}
+
+.g-pageError-img {
+  width: 250px;
+  height: 300px;
+}
+
+.g-pageError-text1 {
+  font-size: 16px;
+  color: #444;
+  line-height: 40px;
+}
+
+.g-pageError-text2 {
+  font-size: 12px;
+  color: #888;
+  line-height: 25px;
+}
+
+/**首次加载模版**/
+
+.g-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f4;
+  z-index: 100;
+}
+
+/**提示信息模版**/
+
+.g-tips {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 10000;
+}
+
+.g-tips-text {
+  display: inline-block;
+  max-width: 60%;
+  vertical-align: middle;
+  padding: 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10rpx;
+}
+
+/* 公共头部 */
+
+.c-head-wrap {
+  height: 90rpx;
+  width: 100%;
+}
+
+.c-head {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(6, 193, 174);
+  padding: 0 20rpx;
+}
+
+.c-head-text {
+  width: 300rpx;
+  text-align: center;
+  color: white;
+  font-size: 35rpx;
+}
+
+.c-head-img {
+  width: 50rpx;
+  height: 40rpx;
+}
+
+.c-head-leftimg {
+  height: 100%;
+  width: 25rpx;
+}
+
+/*************
+----字体库----
+**************/
+
+.font-12-white {
+  font-size: 12px;
+  color: #fff;
+}
+
+.font-12-gray {
+  font-size: 12px;
+  color: #888;
+}
+
+.font-12-dark {
+  font-size: 12px;
+  color: #444;
+}
+
+.font-12-black {
+  font-size: 12px;
+  color: #000;
+}
+
+.font-12-red {
+  font-size: 12px;
+  color: #f13160;
+}
+
+.font-14-white {
+  font-size: 14px;
+  color: #fff;
+}
+
+.font-14-gray {
+  font-size: 14px;
+  color: #888;
+}
+
+.font-14-dark {
+  font-size: 14px;
+  color: #444;
+}
+
+.font-14-black {
+  font-size: 14px;
+  color: #000;
+}
+
+.font-14-red {
+  font-size: 14px;
+  color: #f13160;
+}
+
+.font-16-white {
+  font-size: 16px;
+  color: #fff;
+}
+
+.font-16-gray {
+  font-size: 16px;
+  color: #888;
+}
+
+.font-16-dark {
+  font-size: 16px;
+  color: #444;
+}
+
+.font-16-black {
+  font-size: 16px;
+  color: #000;
+}
+
+.font-16-red {
+  font-size: 16px;
+  color: #f13160;
+}
+
+.font-18-white {
+  font-size: 18px;
+  color: #fff;
+}
+
+.font-18-gray {
+  font-size: 18px;
+  color: #888;
+}
+
+.font-18-dark {
+  font-size: 18px;
+  color: #444;
+}
+
+.font-18-black {
+  font-size: 18px;
+  color: #000;
+}
+
+.font-18-red {
+  font-size: 18px;
+  color: #f13160;
+}

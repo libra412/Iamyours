@@ -1,0 +1,77 @@
+/* pages/postCard/choose.wxss */
+
+.swiper-item {
+  margin: 0 auto;
+  height: 1050rpx;
+}
+
+.swiper-wrap {
+  display: block;
+  position: relative;
+  width: 540rpx;
+  height: 960rpx;
+  overflow: hidden;
+  border-radius: 8rpx;
+  border: 1rpx solid #707070;
+  margin: 0 auto;
+}
+
+.ch-img {
+  width: 540rpx;
+  height: 960rpx;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ch-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  font-size: 28rpx;
+}
+
+/* 明信片新样式 */
+
+Page {
+  background-color: #70c7d1;
+}
+
+.bgswiperitem {
+  background-color: white;
+  width: 400rpx;
+  height: 660rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  margin-top: 85rpx;
+  border-radius: 8rpx;
+}
+
+.chooseimg {
+  width: 380rpx;
+  height: 570rpx;
+  margin: 0 auto;
+}
+
+.change {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color: white;
+}
+
+/* <!-- width: 420px;
+  height: 680px; -->
+
+  <!-- width: 523px;
+  height: 847px; --> */
+
+/* width: 480rpx;
+  height: 690rpx;
+
+  390rpx 
+  550rpx */

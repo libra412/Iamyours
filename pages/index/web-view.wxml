@@ -1,0 +1,2 @@
+<!--pages/index/web-view.wxml-->
+<web-view src="{{pageData.couponUrl}}"></web-view>
