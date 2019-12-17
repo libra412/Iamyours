@@ -1,0 +1,174 @@
+/* pages/user/index.wxss */
+
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.page__hd {
+  width: 100%;
+  height: 200rpx;
+  background-color: #f788ab;
+}
+
+.page__hd image {
+  width: 120rpx;
+  height: 160rpx;
+  line-height: 200rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-left: 34rpx;
+}
+
+.page__hd .title {
+  /* float: left; */
+  font-size: 42rpx;
+  text-align: left;
+  color: white;
+  line-height: 100rpx;
+  margin-left: 160rpx;
+}
+
+.page__bd {
+  width: 100%;
+  height: 1800rpx;
+  letter-spacing: 4rpx;
+  overflow-y: scroll;
+}
+
+.page__bd.albu {
+  width: 100%;
+  height: 750rpx;
+}
+
+.page__bd.albu image {
+  margin: 0rpx 0rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.user-info {
+  width: 100%;
+  height: 150rpx;
+  /* padding: 20rpx 20rpx; */
+  font-family: sans-serif;
+  text-align: left;
+  /* border-bottom: .5rpx solid grey; */
+}
+
+.name {
+  /* font-size: 38rpx; */
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+
+.center {
+  width: 100%;
+  /* position: relative; */
+}
+
+.age {
+  width: 70rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+  font-size: 26rpx;
+  color: white;
+  line-height: 40rpx;
+  text-align: center;
+  letter-spacing: 1rpx;
+  display: inline-block;
+  background-color: #000000;
+  border-radius: 10rpx;
+}
+
+.conste {
+  width: 90rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: white;
+  line-height: 40rpx;
+  text-align: center;
+  letter-spacing: 1rpx;
+  display: inline-block;
+  background-color: #f34157;
+  border-radius: 10rpx;
+}
+
+.active {
+  margin-top: 60rpx;
+  margin-left: 40rpx;
+  color: grey;
+  font-size: 30rpx;
+  /* position: absolute; */
+}
+
+.sign {
+  width: 100%;
+  height: 100rpx;
+  background-color: #f2f2f2;
+}
+
+.sign__title {
+  text-align: left;
+  margin: 50rpx 40rpx;
+  color: #f788ab;
+}
+
+.sign__content image {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin: 10rpx 40rpx;
+}
+
+.sign__add {
+  font-size: 48rpx;
+  color: #f788ab;
+  float: left;
+  margin: 5rpx 40rpx;
+}
+
+.sign__input {
+  font-size: 36rpx;
+  float: left;
+  color: grey;
+  margin: 12rpx 10rpx;
+}
+
+.info {
+  width: 100%;
+  height: 800rpx;
+  /* border-bottom: 0.5rpx solid grey; */
+}
+
+.info__title {
+  padding: 50rpx 40rpx;
+  text-align: left;
+  color: grey;
+}
+
+.hyinfo {
+  margin-top:20rpx; 
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 0.5rpx solid #f2f2f2;
+}
+
+.info_name {
+  width: 150rpx;
+  height: 60rpx;
+  float: left;
+  color: gray;
+  margin: 20rpx 40rpx;
+}
+
+
+.hyinfo__input {
+  /* font-size: 28rpx; */
+  float: left;
+   margin-top:20rpx; 
+  /* justify-content: space-around; */
+}

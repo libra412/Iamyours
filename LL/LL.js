@@ -130,7 +130,7 @@ var LL = {
           try {
             res.data = JSON.parse(res.data)
           } catch (e) {}
-          if (res.data.issuccess) {
+          if (res.data.Issuccess) {
             //请求成功逻辑
             //处理列表状态逻辑,注意各个项目列表逻辑不一定一样
             if (setting.isList && res.data.length > 0) {

@@ -1,0 +1,20 @@
+<!--pages/together/index.wxml-->
+<view class="page">
+  <view class="t_title">
+    <text>结果圆满</text>
+  </view>
+  <view class="user">
+    <image class="user-head" src="{{user.AvatarUrl}}"></image>
+    <image class="user-head" src="{{anotherInfo.avatarUrl}}"></image>
+  </view>
+  <view class="another-info">
+    <text style="color:gray;">两情相悦，彼此珍惜</text>
+    <view class="wechat-info">
+      <text>对方微信：{{anotherInfo.wechatNum}}</text>
+    </view>
+  </view>
+  <view class="foot_info">
+    <text>此次匹配结果圆满，页面已锁定，请通过微信继续交往吧，祝福你们</text>
+    <text>任何问题请加客服微信  阿侠：13147171388</text>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/index/index.wxml-->
+<view class="load">
+    <image src="../../img/load.png"  bindtap="aboutus" />
+   
+</view>

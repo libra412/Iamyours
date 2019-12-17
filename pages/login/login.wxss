@@ -1,0 +1,33 @@
+/* pages/login/login.wxss */
+
+
+Page {
+  background-color: white;
+}
+
+.login-page {
+  width: 750rpx;
+  height: 1200rpx;
+  overflow: hidden;
+  background-image: url(http://static.zheweidao.com/jieguo/image/login.png);
+  background-size: 750rpx 1200rpx;
+}
+
+.login-btn {
+  padding-top: 500rpx;
+}
+
+.aboutus {
+   padding-top: 450rpx;
+   justify-content: center;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.get-btn {
+  color: white;
+  margin: 0 100rpx;
+  margin-top: 70rpx;
+  border-radius: 10rpx;
+  background-color: #f34157;
+}

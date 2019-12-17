@@ -1,0 +1,158 @@
+/* pages/user/index.wxss */
+.page {
+    width: 100%;
+    height: 100%;
+}
+.page__hd {
+    width: 100%;
+    height: 100rpx;
+    background-color: #F788AB;
+}
+.page__hd image{
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 100rpx;
+    display: inline-block;
+    margin-top: 20rpx;
+    margin-left: 34rpx;
+}
+.page__hd .title{
+    /* float: left; */
+    font-size: 42rpx;
+    text-align: left;
+    color: white;
+    line-height: 100rpx;
+    margin-left: 160rpx;
+}
+.page__bd {
+    width: 100%;
+    height: 1800rpx;
+    letter-spacing: 4rpx;
+    overflow-y: scroll;
+}
+.page__bd.albu {
+    width: 100%;
+    height: 650rpx;
+}
+.page__bd.albu image{
+    margin: 6rpx 4rpx;
+    width: 48%;
+    height: 300rpx;
+}
+
+.user-info {
+    width: 100%;
+    display:block;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.hyinfo {
+  margin-top:20rpx; 
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 0.5rpx solid #f2f2f2;
+}
+
+/* 列名 */
+.info_name {
+  width: 150rpx;
+  height: 60rpx;
+  float: left;
+  color: gray;
+  margin: 20rpx 40rpx;
+}
+
+.name {
+    font-size: 42rpx;
+    letter-spacing: 5rpx;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+}
+.center{
+    width: 100%;
+    /* position: relative; */
+}
+
+.active{
+    margin-top: 60rpx;
+    margin-left: 40rpx;
+    color:grey;
+    font-size: 30rpx;
+    /* position: absolute; */
+}
+.sign {
+    width: 100%;
+    height: 240rpx;
+    border-bottom: .5rpx solid grey;
+}
+.sign__title {
+    text-align: left;
+    margin: 50rpx 40rpx;
+    color: #F788AB;
+}
+.sign__content image{
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+    margin: 10rpx 40rpx;
+}
+.sign__add {
+    font-size: 48rpx;
+    color:#F788AB;
+    float:left;
+    margin: 5rpx 40rpx;
+}
+.sign__input {
+    font-size: 36rpx;
+    float: left;
+    color: grey;
+    margin: 12rpx 10rpx;
+}
+.info {
+    width: 100%;
+    height: 800rpx;
+    border-bottom: .5rpx solid grey;
+}
+.info__title {
+    text-align: left;
+    margin: 50rpx 40rpx;
+    color: #F788AB;
+}
+
+.hyinfo image {
+    width: 60rpx;
+    height: 60rpx;
+    float: left;
+    margin: 10rpx 40rpx;
+}
+.hyinfo__add {
+    font-size: 48rpx;
+    color:#F788AB;
+    float:left;
+    margin: 5rpx 40rpx;
+}
+.hyinfo__input {
+    font-size: 36rpx;
+    float: left;
+    color: grey;
+    margin: 12rpx 10rpx;
+}
+.save_btn {
+  width: 100rpx;
+  height: 60rpx;
+  margin: 10rpx 30rpx;
+  border: 1rpx solid #f2f2f2;
+  float: right;
+  font-size: 24rpx;
+  text-align: center;
+}
+.disabled {
+  color:  #1b04043f;
+  background-color:#f2f2f2;
+}
+
+.able {
+   color:  #ffffff;
+  background-color:#d32828;
+}

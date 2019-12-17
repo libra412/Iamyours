@@ -1,0 +1,4 @@
+<!--pages/index/aboutus.wxml-->
+<view class="intro">
+    <image src="../../img/intro.png" />
+</view>

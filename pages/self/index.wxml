@@ -1,0 +1,48 @@
+<!--pages/user/index.wxml-->
+<view class="page">
+<form bindsubmit="saveUser" >
+ <input name='openid' hidden='true' value='{{user.Openid}}' />
+  <view class="page__bd">
+    <view class="page__bd albu">
+      <image src="{{imageList[0]}}" bindtap="uploadImg0" />
+      <image src="{{imageList[1]}}" bindtap="uploadImg1" />
+      <image src="{{imageList[2]}}" bindtap="uploadImg2" />
+      <image src="{{imageList[3]}}" bindtap="uploadImg3" />
+    </view>
+    <view class="user-info">
+      <view class="info__title">我的信息</view>
+      <view class="hyinfo">
+        <view class="info_name">昵称</view>
+        <view class="hyinfo__input">
+          <input name="nickname" placeholder="添加昵称" value="{{user.Nickname}}"></input>
+        </view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">年龄</view>
+        <view class="hyinfo__input"> <input name="age" placeholder="添加年龄" value="{{user.Age}}" ></input></view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">星座</view>
+        <view class="hyinfo__input"> <input name="constellation" placeholder="添加星座" value="{{user.Constellation}}"></input></view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">学校</view>
+        <view class="hyinfo__input"> <input name="school" placeholder="添加学校" value="{{user.School}}"></input></view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">专业</view>
+        <view class="hyinfo__input"> <input name="major" placeholder="添加专业" value="{{user.Major}}"></input></view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">微信</view>
+        <view class="hyinfo__input"> <input name="wechatNum" placeholder="添加微信" value="{{user.WechatNum}}"></input></view>
+      </view>
+      <view class="hyinfo">
+        <view class="info_name">签名</view>
+        <view class="hyinfo__input"> <input name="personalSignature" placeholder="添加签名" value="{{user.PersonalSignature}}"></input></view>
+      </view>
+    </view>
+    <button class="save_btn able"form-type="submit">保存</button>
+  </view>
+   </form>
+</view>

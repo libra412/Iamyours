@@ -16,8 +16,7 @@ var Config = {
   ////====Ajax请求相关配置====////
   AjaxSetting: {
     //所有地址请求头部  
-    // URLHead: "https://shierchajian.mammothcode.com",
-    URLHead: "https://mxp.mammothcode.com/postcard/",
+    URLHead: "https://xcx1.zheweidao.com/",
     //是否开启API模式       
     isApi: false,
     //获取用户openId接口

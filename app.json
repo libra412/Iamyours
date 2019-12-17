@@ -1,15 +1,18 @@
 {
   "pages": [
-    "pages/index/choose",
-    "pages/index/send",
-    "pages/index/getUserInfo",
-    "pages/index/write",
-    "pages/index/web-view"
+    "pages/index/index",
+    "pages/together/index",
+    "pages/login/login",
+    "pages/aboutus/aboutus",
+    "pages/self/index",
+    "pages/user/index",
+    "pages/home/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#41a5aa",
-    "navigationBarTitleText": "漂流明信片",
-    "navigationBarTextStyle": "white"
-  }
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "结果",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
 }
