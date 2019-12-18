@@ -170,6 +170,11 @@ Page({
       })
     }
   },
+  aboutus:function() {
+    wx.navigateTo({
+      url: '../aboutus/aboutus',
+    })
+  },
   // 模拟获取列表数据
   getList() {
     var that = this

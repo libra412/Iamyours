@@ -66,7 +66,7 @@
 }
 .info__title {
     text-align: left;
-     padding: 50rpx 35rpx;
+     padding: 35rpx 35rpx;
     /* margin: 50rpx 35rpx; */
     color: gray;
 }
@@ -77,6 +77,12 @@
   float: left;
   color: gray;
   margin: 20rpx 35rpx;
+}
+
+.hyinfo__input {
+    float: left;
+    color: grey;
+    margin: 20rpx 10rpx;
 }
 
 .name {
@@ -129,18 +135,8 @@
     float: left;
     margin: 10rpx 40rpx;
 }
-.hyinfo__add {
-    font-size: 48rpx;
-    color:#F788AB;
-    float:left;
-    margin: 5rpx 40rpx;
-}
-.hyinfo__input {
-    font-size: 36rpx;
-    float: left;
-    color: grey;
-    margin: 12rpx 10rpx;
-}
+
+
 .save_btn {
   width: 100rpx;
   height: 60rpx;

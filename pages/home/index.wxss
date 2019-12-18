@@ -382,7 +382,7 @@
   display: inline-block;
   width: 115rpx;
   height: 115rpx;
-   margin-left: 120rpx;
+  margin-left: 120rpx;
 }
 
 /* 关于我们 */
@@ -393,5 +393,6 @@
   justify-content: center;
   text-align: center;
   font-size: 24rpx;
+  color:gray;
 }
 

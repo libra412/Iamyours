@@ -145,7 +145,7 @@
 }
 
 .info__title {
-  padding: 50rpx 40rpx;
+  padding: 35rpx 40rpx;
   text-align: left;
   color: grey;
 }
