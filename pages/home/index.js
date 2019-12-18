@@ -33,7 +33,25 @@ Page({
     winHeight = res.windowHeight;
     ratio = res.pixelRatio
     this.getList()
-    
+    if (that.data.list.length > 0) {
+      var user = that.data.list[that.data.list.length - 1]
+      wx.request({
+        url: 'https://api.shareone.online/user/likeStatus',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: {
+          openid: app.globalData.openid,
+          likeOpenid: user.Openid
+        },
+        success: function (res) {
+          that.setData({
+            right: res.data.Data
+          })
+        }
+      })
+    }
   },
   // 
   touchStart(e) {
@@ -61,6 +79,22 @@ Page({
       var list = that.data.list;
       let index = e.currentTarget.dataset.index;
       list[index].x = (endX - startX) > 0 ? winWidth * 2 : -winWidth
+      if ((endX - startX) > 0) {// 向右滑动
+          wx.request({
+            url: 'https://api.shareone.online/user/like',
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              openid: app.globalData.openid,
+              likeOpenid: e.currentTarget.dataset.id
+            },
+            success: function (res) {
+                console.log(res.data)
+            }
+          })
+      }
       that.setData({
         list: list,
         animationA: null
@@ -73,6 +107,26 @@ Page({
         if (list.length < 4) {
           that.getList()
         }
+        if (that.data.list.length > 0) { // 当前这个人是否是喜欢
+          var user = that.data.list[that.data.list.length - 1]
+          wx.request({
+            url: 'https://api.shareone.online/user/likeStatus',
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              openid: app.globalData.openid,
+              likeOpenid: user.Openid
+            },
+            success: function (res) {
+              that.setData({
+                right: res.data.Data
+              })
+            }
+          })
+        }
+
       }, 300)
     } else if (disClientX < 1 && disClientY < 1) {
       // 点击进入
@@ -99,14 +153,14 @@ Page({
     var that = this
     wx.request({
       url: 'https://api.shareone.online/user/list',
-      method:'POST',
+      method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       data: {
         openid: app.globalData.openid
       },
-      success:function(res) {
+      success: function (res) {
         var data = res.data.Data
         let list = that.data.list || [];
         let arr = data || []
