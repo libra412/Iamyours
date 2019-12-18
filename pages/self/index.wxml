@@ -35,7 +35,7 @@
       </view>
       <view class="hyinfo">
         <view class="info_name">微信</view>
-        <view class="hyinfo__input"> <input name="wechatNum" placeholder="请务必填写准确，匹配成功将展示给对方" value="{{user.WechatNum}}"></input></view>
+        <view class="hyinfo__input"> <input name="wechatNum" placeholder="请准确填写，匹配成功展示给对方" value="{{user.WechatNum}}"></input></view>
       </view>
       <view class="hyinfo">
         <view class="info_name">签名</view>
