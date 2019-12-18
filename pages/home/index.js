@@ -88,7 +88,7 @@ Page({
             },
             data: {
               openid: app.globalData.openid,
-              likeOpenid: e.currentTarget.dataset.id
+              uid: e.currentTarget.dataset.id
             },
             success: function (res) {
                 console.log(res.data)
