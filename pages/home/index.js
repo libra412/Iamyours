@@ -63,6 +63,19 @@ Page({
   // 拖动结束
   touchEnd(e) {
     var that = this;
+    if (!that.data.isRegister) { //未注册，归回原位
+      wx.navigateTo({
+        url: '../login/login',
+      })
+      var list = that.data.list;
+      let index = e.currentTarget.dataset.index;
+      list[index].x = winWidth
+      that.setData({
+        list: list,
+        animationA: null
+      });
+      return 
+    }
     let startX = this.data.startX;
     let startY = this.data.startY;
     let endX = e.changedTouches[0].clientX;
@@ -147,6 +160,34 @@ Page({
     that.setData({
       distance: e.detail.x
     })
+  },
+  onShow:function() {
+    var that = this
+    wx.request({
+      url: 'https://api.shareone.online/user/info',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        openid: app.globalData.openid
+      },
+      success: function (res) {
+          that.data.isRegister = res.data.Issuccess
+      }
+    })
+  },
+  lookInfo:function(){
+    var that = this 
+    if(that.data.isRegister) {
+      wx.navigateTo({
+        url: '../self/index',
+      })
+    }else {
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
   },
   // 模拟获取列表数据
   getList() {
