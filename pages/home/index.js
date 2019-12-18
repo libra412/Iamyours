@@ -32,26 +32,7 @@ Page({
     winWidth = res.windowWidth;
     winHeight = res.windowHeight;
     ratio = res.pixelRatio
-    this.getList()
-    if (that.data.list.length > 0) {
-      var user = that.data.list[that.data.list.length - 1]
-      wx.request({
-        url: 'https://api.shareone.online/user/likeStatus',
-        method: 'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        data: {
-          openid: app.globalData.openid,
-          likeOpenid: user.Openid
-        },
-        success: function (res) {
-          that.setData({
-            right: res.data.Data
-          })
-        }
-      })
-    }
+    that.getList()
   },
   // 
   touchStart(e) {
@@ -211,8 +192,26 @@ Page({
           list.unshift(i)
         }
         that.setData({ list })
+        if (that.data.list.length > 0) {
+          var user = that.data.list[that.data.list.length - 1]
+          wx.request({
+            url: 'https://api.shareone.online/user/likeStatus',
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            data: {
+              openid: app.globalData.openid,
+              likeOpenid: user.Openid
+            },
+            success: function (res) {
+              that.setData({
+                right: res.data.Data
+              })
+            }
+          })
+        }
       }
-
     })
   }
 })
