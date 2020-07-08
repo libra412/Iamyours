@@ -46,7 +46,14 @@ Page({
   saveUser: function (e) {
     var that = this
     var obj = e.detail.value;
-    obj.imageUrl = that.data.imageList.join()
+    var imageArr = []
+    var j = 0
+    for(var i=0;i<that.data.imageList.length;i++) {
+      if (that.data.imageList[i] !=="../../img/addImg.png") {
+        imageArr[j++] = that.data.imageList[i]
+      }
+    }
+    obj.imageUrl = imageArr.join()
     console.log(obj)
     wx.request({
       url: "https://api.shareone.online/user/update",

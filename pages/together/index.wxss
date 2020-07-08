@@ -42,6 +42,28 @@
   background-color: gray;
 }
 
+.unlock{
+   margin-top: 100rpx; 
+   width: 100%;
+   text-align: center;
+}
+
+.unlock-btn {
+  margin: 20rpx;
+  font-size: 50rpx;
+  color: white;
+}
+
+.unlock-btn text {
+  padding: 8rpx 35rpx;
+  background-color: #5dd16e;
+}
+
+.unlock-info {
+  font-size: 20rpx;
+  color: rgba(128, 128, 128, 0.6);
+}
+/* 底部 */
 .foot_info {
   position: absolute;
   bottom: 10rpx;

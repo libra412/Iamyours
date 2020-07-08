@@ -388,7 +388,7 @@
 /* 关于我们 */
 .aboutus {
   position: absolute;
-  bottom: 16rpx;
+  bottom: 40rpx;
   width: 100%;
   justify-content: center;
   text-align: center;

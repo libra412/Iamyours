@@ -16,19 +16,19 @@
         <view class="hyinfo">
           <view class="info_name">昵称</view>
           <view class="hyinfo__input">
-            <input name="nickname" placeholder="添加昵称" value="{{user.Nickname}}"></input>
+            <input name="nickname" placeholder-style='color:#rgba(128, 128, 128, 0.3)' placeholder="添加昵称" value="{{user.Nickname}}"></input>
           </view>
         </view>
         <view class="hyinfo">
           <view class="info_name">年龄</view>
           <view class="hyinfo__input">
-            <input name="age" placeholder="添加年龄" value="{{user.Age}}"></input>
+            <input name="age" placeholder="必填" value="{{user.Age>0?user.Age:''}}"></input>
           </view>
         </view>
         <view class="hyinfo">
           <view class="info_name">星座</view>
           <view class="hyinfo__input">
-            <input name="constellation" placeholder="添加星座" value="{{user.Constellation}}"></input>
+            <input name="constellation" placeholder="必填" value="{{user.Constellation}}"></input>
           </view>
         </view>
         <view class="hyinfo">
@@ -46,7 +46,7 @@
         <view class="hyinfo">
           <view class="info_name">微信</view>
           <view class="hyinfo__input">
-            <input name="wechatNum" placeholder="请务必填写准确以做匹配" value="{{user.WechatNum}}"></input>
+            <input name="wechatNum" placeholder="务必填写准确以做匹配" value="{{user.WechatNum}}"></input>
           </view>
         </view>
         <view class="hyinfo">

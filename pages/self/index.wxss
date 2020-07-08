@@ -81,8 +81,12 @@
 
 .hyinfo__input {
     float: left;
-    color: grey;
+    color: rgba(128, 128, 128, 0.5);
     margin: 20rpx 10rpx;
+}
+
+.input-placeholder {
+  color: rgba(128, 128, 128, 0.5);
 }
 
 .name {

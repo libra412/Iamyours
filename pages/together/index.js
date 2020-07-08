@@ -36,6 +36,31 @@ Page({
     })
   },
 
+  unlock:function() {
+    var taht = this
+    wx.request({
+      url: 'https://api.shareone.online/user/goodbye',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        openid: app.globalData.openid
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '解除成功',
+          icon:'none',
+          duration: 3000,
+        })
+        setTimeout(function(){
+          wx.redirectTo({
+            url: '../home/index',
+          })
+        },3000)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

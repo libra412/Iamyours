@@ -13,6 +13,14 @@
       <text>对方微信：{{anotherInfo.wechatNum}}</text>
     </view>
   </view>
+  <view class="unlock">
+    <view class="unlock-btn" bindtap="unlock">
+      <text>解除匹配</text>
+    </view>
+    <view class="unlock-info">
+      <text>解除匹配有代价，想好在做决定</text>
+    </view>
+  </view>
   <view class="foot_info">
     <text>此次匹配结果圆满，页面已锁定，请通过微信继续交往吧，祝福你们</text>
     <text>任何问题请加客服微信  阿侠：13147171388</text>
