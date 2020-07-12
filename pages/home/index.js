@@ -22,6 +22,7 @@ Page({
     y: winHeight,
     animationA: {},
     list: [],
+    backList: [],
     distance: "",
     startX: '',
     startY: '',
@@ -37,7 +38,7 @@ Page({
       p = { index: 0 }
       wx.setStorageSync("page", p)
    }
-    that.getList(p.index, 5)
+    that.getList(p.index, 1)
   },
   // 拖动开始
   touchStart(e) {
@@ -74,11 +75,16 @@ Page({
       // 当滑动大于 滑块宽度的1/3翻页
       let moveDis = 666 / (ratio * 4);
       if (disX > moveDis && disClientX > moveDis) { //判断是否移走
+        let isRight = (endX - startX) > 0
+        let direction = 1;
+        if (isRight) {
+          direction = 0;
+        }
         var list = that.data.list;
         // let index = e.currentTarget.dataset.index;
         var index = list.length-1;
         console.log(index, list[index])
-        list[index].x = (endX - startX) > 0 ? winWidth * 2 : -winWidth
+        list[index].x = isRight ? winWidth * 2 : -winWidth
         that.setData({list});
        
         // 移出动画结束后 从list内移除
@@ -94,7 +100,7 @@ Page({
           if (list.length < 3) {
             var p = wx.getStorageSync("page")
             console.log(p)
-            that.getList(p.index, 3)
+            that.getList(p.index, 1, direction)
           }
         }, 100)
       } else if (disClientX < 1 && disClientY < 1) {
@@ -204,14 +210,22 @@ Page({
       })
     }
   },
-  // 关于我们
-  aboutus: function () {
-    wx.navigateTo({
-      url: '../aboutus/aboutus',
-    })
+  // 搜索跳转
+  search: function () {
+    var that = this
+    if (that.data.isRegister) {
+      wx.navigateTo({
+        url: '../search/index',
+      })
+    } else {
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
   },
+  
   // 模拟获取列表数据
-  getList(index, pageSize) {
+  getList(index, pageSize, direction) {
     var that = this
     wx.request({
       url: 'https://api.shareone.online/user/list',
@@ -221,6 +235,7 @@ Page({
       },
       data: {
         openid: app.globalData.openid,
+        direction:direction,
         index:index,
         pageSize:pageSize,
       },

@@ -1,6 +1,10 @@
 <!--pages/home/index.wxml-->
 <view class='page-box box'>
-
+  <view class="weui-cells weui-cells_after-title"> 
+    <view class="weui-cell weui-cell_input" bindtap="search" >
+        <input class="weui-input search" confirm-type="search" disabled />
+      </view>
+    </view>
   <view class="m-box">
     <movable-area class="m-area">
       <movable-view class='m-item' wx:for="{{list}}" wx:key="item" x="{{item.x}}" y="{{item.y}}" damping="50" direction="all" bindchange="onChange" data-index="{{index}}" catchtouchend="touchEnd" catchtouchstart="touchStart" out-of-bounds="true" data-auth="{{item.auth}}"
@@ -16,6 +20,7 @@
               <view class="age">{{item.Sex===1?'♂':'♀'}} {{item.Age}}</view>
               <view class="conste">{{item.Constellation}}</view>
               <!-- <view class="grade">大三</view> -->
+              <view class="no">结果号：{{item.Id}}</view>
             </view>
           </view>
         </view>
@@ -32,7 +37,5 @@
       </view>
     </view>
   </view>
-  <view class="aboutus">
-    <text bindtap="aboutus">关于我们</text>
-  </view>
+ 
 </view>

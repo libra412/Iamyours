@@ -1,0 +1,31 @@
+<!--pages/search/index.wxml-->
+
+<view class="page-body body">
+	<view class="page-section header">
+		<input name="content" class="weui-input search" confirm-type="search" bindconfirm="searchUserInfo" focus="true" />
+	</view>
+
+	<view class="page-section line" />
+
+
+	<view class="user-list">
+		<view class="flex user-item" wx:for="{{list}}" wx:for-item="item" wx:key='item' wx:for-index="idx">
+			<view class="flex user-box" data-id="{{item.Id}}"  data-openid="{{item.Openid}}" bindtap="lookUser">
+					<image class="avatar" src="{{item.AvatarUrl}}" />
+				<view class="flex user-profile">
+					<text class="nickname">{{item.Nickname}}</text>
+					<view class="flex detail">
+						<view class="age">{{item.Sex===1?'♂':'♀'}} {{item.Age}}</view>
+						<view class="conste">{{item.Constellation}}</view>
+					</view>
+				</view>
+			</view>
+      <view class="like" >
+        <image class="like-img" bindtap="unlikeYou" data-index="{{idx}}" wx:if="{{item.IsLike}}" src="../../img/logo_full.png" />
+        <image class="like-img"  bindtap="likeYou" data-index="{{idx}}" wx:else src="../../img/logo_empty.png"></image>
+      </view>
+		</view>
+	</view>
+
+
+</view>

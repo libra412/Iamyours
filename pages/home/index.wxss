@@ -4,6 +4,19 @@
   height: 100%;
 }
 
+.search {
+  margin-left: 42rpx;
+  font-size: 14px;
+  border-radius: 50rpx;
+  width: 666rpx;
+  height: 31px;
+  background-color: #f4f4f4;
+  background-image: url(https://file.shareone.online/images/icon/search_icon.png);
+  background-repeat: no-repeat;
+  background-size: 30rpx;
+  background-position: 10px;
+}
+
 /* swiper */
 
 .top-box {
@@ -219,7 +232,7 @@
 /*  滑块 */
 
 .m-box {
-  padding-top: 50rpx;
+  padding-top: 15rpx;
 }
 
 .m-area {
@@ -235,7 +248,7 @@
   position: relative;
   margin-left: 42rpx;
   width: 666rpx;
-  height: 892rpx;
+  height: 818rpx;
   border-radius: 10rpx;
   z-index: 9;
   background: #fff;
@@ -244,7 +257,7 @@
 
 .image {
   width: 666rpx;
-  height: 740rpx;
+  height: 666rpx;
   margin: 0 auto;
   /* border-radius: 50%; */
   display: block;
@@ -356,6 +369,19 @@
   margin-left: 10rpx;
 }
 
+/* 结果号 */
+.no {
+  width: 420rpx;
+  height: 40rpx;
+  text-align: right;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: black;
+   /* background-color: #fdaf04; */
+  float: right;
+  margin-left: 10rpx;
+}
+
 .status {
   position: absolute;
   padding-top: 120rpx;
@@ -375,6 +401,7 @@
   width: 115rpx;
   height: 115rpx;
   margin-left: 200rpx;
+  z-index: 1;
 }
 
 
@@ -383,16 +410,5 @@
   width: 115rpx;
   height: 115rpx;
   margin-left: 120rpx;
-}
-
-/* 关于我们 */
-.aboutus {
-  position: absolute;
-  bottom: 40rpx;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  font-size: 24rpx;
-  color:gray;
 }
 

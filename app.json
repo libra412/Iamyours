@@ -2,10 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/together/index",
-    "pages/login/login",
-    "pages/aboutus/aboutus",
     "pages/self/index",
     "pages/user/index",
+    "pages/search/index",
+    "pages/login/login",
+    "pages/aboutus/aboutus",
     "pages/home/index"
   ],
   "window": {

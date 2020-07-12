@@ -1,0 +1,100 @@
+/* pages/search/index.wxss */
+
+.body {
+  background-color: #f4f4f4;
+}
+
+.header {
+  height:40px;
+  background-color:white;
+}
+
+.line {
+  height:1px;
+}
+
+.search {
+  margin-left: 42rpx;
+  font-size: 14px;
+  border-radius: 50rpx;
+  width: 666rpx;
+  height: 31px;
+  background-color: #f4f4f4;
+  background-image: url(https://file.shareone.online/images/icon/search_icon.png);
+  background-repeat: no-repeat;
+  background-size: 30rpx;
+  background-position: 20rpx;
+  padding-left: 30px;
+}
+
+
+.user-list {
+  height:100%;
+  background-color:white;
+}
+
+.user-item {
+  border-bottom: 0.5rpx solid #f2f2f2;
+  justify-content:space-between ;
+}
+
+.user-box {
+  padding:10px;
+  width:280px;
+}
+
+.avatar {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
+
+.user-profile {
+  flex-direction:column;
+  padding-left:5px;
+}
+
+.nickname {
+  margin:5px;
+}
+
+.detail {
+  flex-direction:row;
+  margin:5px;
+}
+
+.age {
+  width: 70rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: white;
+  border-radius: 10rpx;
+  background-color: #000000;/*rgb(114, 190, 231);*/
+  float: left;
+}
+
+.conste {
+  width: 90rpx;
+  height: 40rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: white;
+  background-color: #f34157;
+  float: left;
+  margin-left: 10rpx;
+}
+
+
+.like {
+  padding:40rpx 0 10rpx 0;
+  display: inline-block;
+  width: 115rpx;
+}
+
+.like-img {
+  width:80rpx;
+  height:80rpx;
+}
+

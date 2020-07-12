@@ -5,30 +5,6 @@
   height: 100%;
 }
 
-.page__hd {
-  width: 100%;
-  height: 200rpx;
-  background-color: #f788ab;
-}
-
-.page__hd image {
-  width: 120rpx;
-  height: 160rpx;
-  line-height: 200rpx;
-  display: inline-block;
-  margin-top: 20rpx;
-  margin-left: 34rpx;
-}
-
-.page__hd .title {
-  /* float: left; */
-  font-size: 42rpx;
-  text-align: left;
-  color: white;
-  line-height: 100rpx;
-  margin-left: 160rpx;
-}
-
 .page__bd {
   width: 100%;
   height: 1800rpx;
@@ -48,12 +24,18 @@
 }
 
 .user-info {
-  width: 100%;
+  width: 80%;
   height: 150rpx;
   /* padding: 20rpx 20rpx; */
   font-family: sans-serif;
   text-align: left;
   /* border-bottom: .5rpx solid grey; */
+}
+
+.like {
+  padding:40rpx 0 10rpx 0;
+  display: inline-block;
+  width: 115rpx;
 }
 
 .name {
@@ -171,4 +153,13 @@
   float: left;
    margin-top:20rpx; 
   /* justify-content: space-around; */
+}
+
+/* 关于我们 */
+.aboutus {
+  padding-bottom: 100rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color:gray;
 }

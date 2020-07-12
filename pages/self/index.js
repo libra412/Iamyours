@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imageList: ['../../img/addImg.png', '../../img/addImg.png', '../../img/addImg.png', '../../img/addImg.png'],
+    imageList: ['../../img/addImg.jpeg', '../../img/addImg.jpeg', '../../img/addImg.jpeg', '../../img/addImg.jpeg'],
   },
 
   /**
