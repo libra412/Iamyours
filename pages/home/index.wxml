@@ -29,12 +29,13 @@
     </movable-area>
   </view>
   <view class="page__ft">
-    <view>
-      <image class="info" src="../../img/info.png" bindtap="lookInfo"></image>
-      <view class="like" >
+    <view class="flex operate-box">
+      <image class="operate-icon "bindtap="lookMessage" src="../../img/message.png"></image>
+      <view class="operate-icon " >
         <image bindtap="unlikeYou" wx:if="{{right}}" src="../../img/logo_full.png" />
         <image bindtap="likeYou" wx:else src="../../img/logo_empty.png"></image>
       </view>
+       <image class="operate-icon " src="../../img/userinfo.png" bindtap="lookInfo"></image>
     </view>
   </view>
  

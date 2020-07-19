@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view class='login-page'>
   <view class="login-btn">
-   <button open-type="getUserInfo" class='btn-bgcolor get-btn' bindgetuserinfo='bindGetUserInfo' lang='zh_CN' >确认授权</button>
+   <button open-type="getUserInfo" class='get-btn' bindgetuserinfo='bindGetUserInfo' lang='zh_CN' >确认授权</button>
 </view>
   <!-- <view class="aboutus">
     <text bindtap="aboutus">关于我们</text>

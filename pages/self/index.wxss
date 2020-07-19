@@ -3,18 +3,10 @@
     width: 100%;
     height: 100%;
 }
-.page__hd {
-    width: 100%;
-    height: 100rpx;
-    background-color: #F788AB;
-}
+
 .page__hd image{
     width: 60rpx;
     height: 60rpx;
-    /* line-height: 100rpx; */
-    /* display: inline-block; */
-    /* margin-top: 20rpx; */
-    /* margin-left: 34rpx; */
 }
 .page__hd .title{
     /* float: left; */
@@ -78,21 +70,26 @@
 }
 .info__title {
     text-align: left;
-     padding: 35rpx 35rpx;
-    /* margin: 50rpx 35rpx; */
-    color: gray;
+    padding: 35rpx 35rpx;
+    color: black;
 }
+.no {
+    width: 580rpx;
+    padding: 35rpx 0rpx;
+    text-align: right;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    color: black;
+  }
 /* 列名 */
 .info_name {
   width: 150rpx;
   height: 60rpx;
-  float: left;
   color: gray;
   margin: 20rpx 35rpx;
 }
 
 .hyinfo__input {
-    float: left;
     color: rgba(128, 128, 128, 0.5);
     margin: 20rpx 10rpx;
 }
@@ -152,11 +149,15 @@
     margin: 10rpx 40rpx;
 }
 
+.btn-box {
+    height: 250rpx;
+    padding-top: 25rpx;
+}
 
 .save_btn {
   width: 100rpx;
   height: 60rpx;
-  margin: 10rpx 30rpx;
+  margin: 0rpx 20rpx;
   border: 1rpx solid #f2f2f2;
   float: right;
   font-size: 24rpx;
@@ -171,3 +172,52 @@
    color:  #ffffff;
   background-color:#f34157;
 }
+
+.shop-info {
+    width: 100%;
+    height: 100rpx;
+    float: left;
+    margin: 20rpx 35rpx; 
+  }
+  
+  .shop-icon {
+    width: 60rpx;
+    height: 60rpx;
+    float: left;
+  }
+  
+  .shop-name {
+    float: left;
+    margin: 0rpx 140rpx;
+  }
+
+  .bottom{
+    position: absolute;
+    width:100%;
+    bottom:50rpx;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    height: 210rpx;
+  }
+
+  .page_ft {
+    position:absolute;
+    width:500rpx;
+    height:100rpx;
+    bottom:40rpx;
+    justify-content:space-between;
+    z-index:1;
+    margin-left: 125rpx;
+  }
+
+  .cut-img{
+    width: 100rpx;
+    margin: 20rpx 20rpx;
+    z-index:2;
+    background-color: red;
+    color:white;
+    text-align: center;
+  }

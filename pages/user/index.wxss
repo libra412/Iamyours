@@ -122,14 +122,23 @@
 
 .info {
   width: 100%;
-  height: 800rpx;
+  height: 950rpx;
   /* border-bottom: 0.5rpx solid grey; */
 }
 
 .info__title {
   padding: 35rpx 40rpx;
   text-align: left;
-  color: grey;
+  color: black;
+}
+
+.no {
+  width: 580rpx;
+  padding: 35rpx 0rpx;
+  text-align: right;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: black;
 }
 
 .hyinfo {
@@ -142,24 +151,52 @@
 .info_name {
   width: 150rpx;
   height: 60rpx;
-  float: left;
   color: gray;
-  margin: 20rpx 40rpx;
+  margin: 20rpx 0 0 35rpx;
 }
 
 
 .hyinfo__input {
   /* font-size: 28rpx; */
-  float: left;
    margin-top:20rpx; 
   /* justify-content: space-around; */
 }
 
+.shop-info {
+  width: 400rpx;
+  height: 80rpx;
+  margin: 10rpx 35rpx;
+}
+
+.shop-icon {
+  width: 60rpx;
+  height: 60rpx
+}
+
+.shop-name {
+  font-size: 26rpx;
+  color: black;
+  margin:15rpx 20rpx;
+}
+
+.edit {
+  text-align: right;
+  padding: 24rpx;
+}
+
+.edit_btn {
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
 /* 关于我们 */
 .aboutus {
-  padding-bottom: 100rpx;
+  padding-bottom: 30rpx;
   width: 100%;
   text-align: center;
-  font-size: 24rpx;
-  color:gray;
+  font-size: 26rpx;
+  font-weight: bold;
+  color:#f34157;
 }

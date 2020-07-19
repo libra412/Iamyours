@@ -1,0 +1,3 @@
+<!--pages/images/index.wxml-->
+
+			<image-cropper  id="image-cropper" disable_width="{{true}}" disable_height="{{true}}" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="clickcut"></image-cropper>

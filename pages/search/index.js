@@ -76,6 +76,10 @@ Page({
           uid: user.Id
       },
         success: function (res) {
+          wx.showToast({
+            title: '已喜欢TA',
+            icon: 'none',
+          })
           list[index].IsLike = 1
           that.setData({list})
           console.log(res.data)
@@ -106,6 +110,10 @@ Page({
           uid: user.Id
         },
         success: function (res) {
+          wx.showToast({
+            title: '已取消喜欢',
+            icon: 'none',
+          })
           list[index].IsLike = 0
           that.setData({ list})
           console.log(res.data)

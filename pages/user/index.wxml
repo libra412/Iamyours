@@ -23,25 +23,37 @@
         </view>
     </view>
 
-    <view class="sign">
-        <view class="info__title">我的信息</view>
+    <view class="sign flex">
+        <view class="info__title">信息</view>
+        <view class="no">结果号：{{user.Id}}</view>
     </view>
     <view class="info">
-        <view class="hyinfo">
-            <view class="info_name">学校 </view>
-            <view class="hyinfo__input">{{user.School}}</view>
-        </view>
-        <view class="hyinfo">
-            <view class="info_name">专业 </view>
-            <view class="hyinfo__input">{{user.Major}}</view>
-        </view>
-        <view class="hyinfo">
+        <view class="hyinfo flex">
             <view class="info_name">微信 </view>
             <view class="hyinfo__input">匹配后出现</view>
         </view>
-        <view class="hyinfo">
+        <view class="hyinfo flex">
+            <view class="info_name">学校 </view>
+            <view class="hyinfo__input">{{user.School}}</view>
+        </view>  
+       <view class="hyinfo flex">
             <view class="info_name">签名 </view>
             <view class="hyinfo__input">{{user.PersonalSignature}}</view>
+        </view><view class="hyinfo flex">
+            <view class="info_name">微博 </view>
+            <view class="hyinfo__input">{{user.Weibo}}</view>
+        </view>
+        <view class="hyinfo flex">
+            <view class="info_name">公众号</view>
+            <view class="hyinfo__input">{{user.Douyin}}</view>
+        </view>
+         
+        <view class="shop-info flex" wx:if="{{user.HasShopPath}}">
+            <image class="shop-icon" src="../../img/shop_icon.jpeg"></image>
+           <view class="shop-name" bindtap="gotoShop" data-appid="{{user.ShopPath}}">微信小商店</view>
+        </view>
+        <view wx:if='{{isEdit}}' class="edit">
+             <text class="edit_btn" bindtap="edit">编辑</text>
         </view>
     </view>
         <view class="aboutus">

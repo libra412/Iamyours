@@ -158,6 +158,10 @@ Page({
           uid: user.Id
       },
         success: function (res) {
+          wx.showToast({
+            title: '已喜欢TA',
+            icon: 'none',
+          })
           that.setData({right:1})
           console.log(res.data)
           var isMarried = res.data.Data
@@ -189,6 +193,10 @@ Page({
           uid: user.Id
         },
         success: function (res) {
+          wx.showToast({
+            title: '已取消喜欢',
+            icon: 'none',
+          })
           that.setData({ right: 0 })
           console.log(res.data)
         }
@@ -197,12 +205,37 @@ Page({
       //TODO 无用户处理 
     }
   },
+  // 查看消息
+  lookMessage: function(e) {
+      wx.showToast({
+        title: '配对成功后通过添加微信社交哦',
+        icon: 'none',
+      })
+  },
   // 查看自己详情
   lookInfo: function () {
     var that = this
     if (that.data.isRegister) {
-      wx.navigateTo({
-        url: '../self/index',
+      wx.request({
+        url: 'https://api.shareone.online/user/info',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: { openid: app.globalData.openid },
+        success: function (res) {
+          console.log(res.data)
+          if (!res.data.Issuccess) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          } else {
+            var user = res.data.Data
+            wx.navigateTo({
+              url: '../user/index?isSelf=true&uid='+user.Id,
+            })
+          }
+        }
       })
     } else {
       wx.navigateTo({

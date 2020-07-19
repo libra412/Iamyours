@@ -396,19 +396,14 @@
   padding-top: 80rpx;
 }
 
-.info {
-  display: inline-block;
-  width: 115rpx;
-  height: 115rpx;
-  margin-left: 200rpx;
-  z-index: 1;
+.operate-box {
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-
-.like {
-  display: inline-block;
-  width: 115rpx;
-  height: 115rpx;
-  margin-left: 120rpx;
+.operate-icon {
+  width:66rpx;
+  height:66rpx;
 }
+
 
